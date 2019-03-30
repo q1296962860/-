@@ -7,9 +7,9 @@ a:hover{text-decoration: none}
 #top_bg{width: 100%;height: 30px;background: #f7f7f7;}
 #top{width: 1200px;height: 30px;line-height: 30px;margin: auto}
 .left{float: left;}
-.local1{background: url("../img/local.png"); width: 17px;}
-.local2{width: 17px;}
-#top .left.local1{width: 17px; height: 17px;}
+.left .local1{width: 17px;}
+.left .local1 img{width: 17px; margin: 7px 8px 0 0;}
+top .left.local1{width: 17px; height: 17px;}
 .right{float: right}
 #top li{float: left;padding: 0 10px 0 0}
 #top .line{color: #ccc}
