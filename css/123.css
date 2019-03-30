@@ -1,6 +1,6 @@
 /* CSS Document */
 body,ul,p,dl,dt,dd,hl,table,tr,tdd,th,h2,li{margin: 0;padding: 0;list-style: none;outline: none;border: 0}
-bofy{color: #6c6c6;font-size: 12px;font-family: "微软雅黑"}
+body{color: #6c6c6;font-size: 12px;font-family: "微软雅黑"}
 a:link,a:visited{text-decoration: none;color: #6C6C6C}
 a:hover{text-decoration: none}
 
@@ -9,17 +9,26 @@ a:hover{text-decoration: none}
 .left{float: left;}
 .left .local1{width: 17px;}
 .left .local1 img{width: 17px; margin: 7px 8px 0 0;}
+.choujiang1{background: url("../img/抽奖.png") no-repeat; background-size: 60px 20px;width: 60px;height: 20px;margin: 5px 8px 0 0;}
+.choujiang2{width: 60px;height: 20px;display: block;}
 top .left.local1{width: 17px; height: 17px;}
 .right{float: right}
 #top li{float: left;padding: 0 10px 0 0}
 #top .line{color: #ccc}
 .right li{cursor: pointer;border: 1px solid #f7f7f7}
-.right li span{padding: 0 9px}
+.right li span{padding: 0 2px}
 .right .list{position: relative}
 .right #list_cur{width: 100px;position: absolute;left: -1px;top:30px;background-color: #fff ;border: 1px solid #eee}
 .right #list_cur a{display: block;padding: 0 10px;line-height: 28px;color: #6C6C6C}
 .right #list_cur a:hover{background: #f5f5f5}
-
+.wechat1{background: url("../img/微信.png")no-repeat;background-size: 17px 17px;width: 6px;height: 17px;margin-top: 8px;}
+.wechat2{width: 17px;height: 17px;}
+.webo1{background: url("../img/微博.png")no-repeat;background-size: 15px 15px;width: 6px;height: 17px;margin-top: 7px;}
+.webo2{width: 17px;height: 17px;}
+.mobiphone1{background: url("../img/手机.png")no-repeat;background-size: 15px 15px;width: 6px;height: 17px;margin-top: 7px;}
+.mobiphone2{width: 17px;height: 17px;}
+.phone1{background: url("../img/24小时电话.png")no-repeat;background-size: 15px 15px;width: 6px;height: 17px;margin-top: 8px;}
+.phone2{width: 17px;height: 17px;}
 /*
 @keyframes frist{
 	from{background: #355EA6;}
