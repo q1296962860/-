@@ -1,6 +1,6 @@
 /* CSS Document */
 body,ul,p,dl,dt,dd,hl,table,tr,tdd,th,h2,li{margin: 0;padding: 0;list-style: none;outline: none;border: 0}
-body{color: #6c6c6;font-size: 12px;font-family: "微软雅黑"}
+body{color: #6c6c6;font-size: 12px;font-family: "微软雅黑";cursor:url("../img/Arrow.ico"),auto;}
 a:link,a:visited{text-decoration: none;color: #6C6C6C}
 a:hover{text-decoration: none}
 
@@ -47,6 +47,9 @@ top .left.local1{width: 17px; height: 17px;}
 .search3_2{width: 98px;height: 43px;background: #2AB9E7;display: block;float: right;line-height: 46px;font-size: 16px;text-align: center;font-weight: 600;color: white;}
 .search3_1 a{color: white;}
 .search3_1 a:hover{background: #95E5FF}
+.remind1{width: 250px;height: 50px;float: right;margin: 6px 10px 0 0}
+.remind1 div{float: left;width: 62px;height: 50px;text-align: center;}
+.remind2{width: 40px;height: 40px;}
 /*
 @keyframes frist{
 	from{background: #355EA6;}
