@@ -1,5 +1,5 @@
 /* CSS Document */
-body,ul,p,dl,dt,dd,hl,table,tr,tdd,th,h2,li{margin: 0;padding: 0;list-style: none;outline: none;border: 0}
+body,ul,p,dl,dt,dd,hl,table,tr,tdd,th,h2,li{margin: 0;padding: 0;list-style: none;outline: none;border: 0;}
 body{color: #6c6c6;font-size: 12px;font-family: "微软雅黑";cursor:url("../img/Arrow.ico"),auto;}
 a:link,a:visited{text-decoration: none;color: #6C6C6C}
 a:hover{text-decoration: none}
@@ -15,10 +15,11 @@ top .left.local1{width: 17px; height: 17px;}
 .right{float: right}
 #top li{float: left;padding: 0 10px 0 0}
 #top .line{color: #ccc}
+.left1 #qiehuan1{width: 390px;height: 375px; display: none;position: absolute;left: 100px;top:28px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
 .right li{cursor: pointer;border: 1px solid #f7f7f7}
 .right li span{padding: 0 5px}
 .right .list{position: relative}
-.right #list_cur{width: 80px;position: absolute;left: -1px;top:30px;background-color: #fff ;border: 1px solid #eee;}
+.right #list_cur{width: 80px;display: none;position: absolute;left: -1px;top:28px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
 .right #list_cur a{display: block;padding: 0 10px;line-height: 28px;color: #6C6C6C;}
 .right #list_cur a:hover{background: #f5f5f5;color: #f08300}
 .right a:hover,.left1 a:hover{color: #f08300}
@@ -50,6 +51,19 @@ top .left.local1{width: 17px; height: 17px;}
 .remind1{width: 250px;height: 50px;float: right;margin: 6px 10px 0 0}
 .remind1 div{float: left;width: 62px;height: 50px;text-align: center;}
 .remind2{width: 40px;height: 40px;}
+
+#daohang_bg{width: 100%;height: 44px;background: #2AB9E7}
+#daohang1{width: 1250px;height: 44px;;margin: auto;}
+.daohang1_0 li{float: left;height: 44px;}
+.home1,.home2{width: 56px;background: #2A74E7}
+.daohang1_8,.daohang1_9,.daohang2_8,.daohang2_9{width: 56px;}
+.daohang1_1,.daohang1_2,.daohang1_3,.daohang1_6,.daohang1_7,.daohang1_10,.daohang1_11,.daohang2_1,.daohang2_2,.daohang2_3,.daohang2_6,.daohang2_7,.daohang2_10,.daohang2_11{width: 74px;}
+.daohang1_4,.daohang1_5,.daohang1_12,.daohang2_4,.daohang2_5,.daohang2_12{width: 90px;}
+.daohang1_0 a{float: left; font-weight: 500;color: white;font-size: 16px;line-height: 44px;text-align: center;position: absolute; display: block;}
+.daohang1_0 a:hover{background: #95E5FF;}
+.home1 a:hover,.home2 a:hover{background: #2A74E7}
+
+
 /*
 @keyframes frist{
 	from{background: #355EA6;}
