@@ -1,4 +1,4 @@
-function change(myid,mode)
+function change1(myid,mode)
 {
 	document.getElementById(myid).style.display=mode;
 	if(mode == 'block')
@@ -8,6 +8,21 @@ function change(myid,mode)
 		document.getElementById(myid).parentNode.style.backgroundColor="#fff";
 		document.getElementById(myid).parentNode.style.border="1px solid #eee";
 		document.getElementById(myid).parentNode.style.borderBottom="none";
+	}
+ else
+	 {
+		 document.getElementById(myid).parentNode.style.backgroundColor="";
+		 document.getElementById(myid).parentNode.style.border="";
+	 }
+}
+
+function change2(myid,mode)
+{
+	document.getElementById(myid).style.display=mode;
+	if(mode == 'block')
+	{
+		document.getElementById(myid).style.border="1px solid #2AB9E7";
+		document.getElementById(myid).style.borderTop="none";
 	}
  else
 	 {
