@@ -1,6 +1,6 @@
 /* CSS Document */
 body,ul,p,dl,dt,dd,hl,table,tr,tdd,th,h2,li{margin: 0;padding: 0;list-style: none;outline: none;border: 0;}
-body{color: #6c6c6;font-size: 12px;font-family: "微软雅黑";cursor:url("../img/Arrow.ico"),auto;}
+body{color: #6c6c6c;font-size: 12px;font-family: "微软雅黑";cursor:url("../img/Arrow.ico"),auto;}
 a:link,a:visited{text-decoration: none;color: #6C6C6C}
 a:hover{text-decoration: none}
 
@@ -9,7 +9,7 @@ a:hover{text-decoration: none}
 .left{float: left;margin-left: -25px;}
 .left .local1{width: 17px;}
 .left .local1 img{width: 17px; margin: 7px 8px 0 0;}
-.left1{height: 30px}
+.left1{height: 30px;}
 .choujiang1{background: url("../img/抽奖.png") no-repeat; background-size: 60px 20px;width: 60px;height: 20px;margin: 5px 8px 0 0;}
 .choujiang2{width: 60px;height: 20px;display: block;}
 top .left.local1{width: 17px; height: 17px;}
@@ -23,17 +23,18 @@ top .left.local1{width: 17px; height: 17px;}
 .left1 #qiehuan1 dt{width: 50px;float: left;color: #6c6c6c}
 .left1 #qiehuan1 .dl1{font-size: 12px;line-height: 30px;margin-left: 15px}
 .left1 #qiehuan1 .dl1_1{font-size: 12px;line-height: 30px;margin-left: 10px}
-.left1 #qiehuan1 a{color: #000}
+.left1 #qiehuan1 a{font-weight: 600;}
 .left1 #qiehuan1 .dl1_1 a{margin-left: 5px;}
 .left1 #qiehuan1 p{color: #6c6c6c}
+.qirhuan1{display: block;}
 
 .right li{cursor: pointer;border: 1px solid #f7f7f7}
 .right li span{padding: 0 5px}
 .right .list{position: relative}
 .right #list_cur{width: 80px;display: none;position: absolute;left: -1px;top:28px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
 .right #list_cur a{display: block;padding: 0 10px;line-height: 28px;color: #6C6C6C;}
-.right #list_cur a:hover{background: #f5f5f5;color: #f08300}
-.right a:hover,.left1 a:hover{color: #f08300}
+.right #list_cur a:hover{background: #f5f5f5;color: #00A1E9}
+.right a:hover,.left1 a:hover{color: #00A1E9}
 .wechat1{background: url("../img/微信.png")no-repeat;background-size: 20px 20px;width: 50px;height: 17px;margin-top: 5px;}
 .wechat2{display: block;width: 45px;height: 30px;margin-top: -6px;text-align: right;}
 .webo1{background: url("../img/微博.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 7px;}
