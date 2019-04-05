@@ -23,15 +23,19 @@ function change2(myid,mode)
 	{
 		document.getElementById(myid).style.border="1px solid #2AB9E7";
 		document.getElementById(myid).style.borderTop="none";
+		if(myid == "qiehuan1"){
 		document.getElementById("local1_1").src="img/local-after.png";
 		document.getElementById("local_title").style.color="#00A1E9";
+		}
 	}
  else
 	 {
 		 document.getElementById(myid).parentNode.style.backgroundColor="";
 		 document.getElementById(myid).parentNode.style.border="";
+		 if(myid == "qiehuan1"){
 		 document.getElementById("local1_1").src="img/local.png";
 		 document.getElementById("local_title").style.color="#6c6c6c";
+		 }
 	 }
 }
 
@@ -39,4 +43,11 @@ function change_name(id)
 {
 	var text = document.getElementById(id).innerText;
 	document.getElementById("local_title").innerText = String(text);
+	document.getElementById("local_title1").innerText = String(text);
+}
+
+function qiehuan2_2(id)
+{
+	var text = document.getElementById(id).innerText;
+	document.getElementById("local_title1").innerText = String(text);
 }

@@ -53,8 +53,16 @@ a:hover{text-decoration: none}
 .search1_1{width: 100px;height: 40px;float: left;background: #95E5FF}
 .search1_2{width: 100px;height: 40px;display: block;line-height: 40px;text-align: center;border: solid 2px #2AB9E7;margin: -2px 0 0 -2px;font-size: 15px;}
 .search2_1{height: 40px;width: 120px;float: left}
-.search2_2{width: 120px;height: 40px;float: left;line-height: 40px;}
+.search2_2{width: 120px;height: 40px;float: left;line-height: 40px;position: relative;}
 .search2_3{display: block;width: 120px;height: 40px;float: left;text-align: center;font-size: 13px;}
+.search2_2 #qiehuan2{width: 490px;height: 200px; display: none;position:absolute;left: -100px;top:40px;background-color:#FFFFFF ;z-index: 3;}
+
+.qiehuan2_1{width: 460px;height: 180px;margin-left: 15px;margin-top: 10px}
+.qiehuan2_1 p{margin-left: 35px;width: 72px;line-height: 55px;height: 40px}
+.qiehuan2_1_1 {width: 440px;height: 125px;margin-left: 15px;margin-top: 15px}
+.qiehuan2_1_1 a{width: 29px;height: 25px;margin-left: 19px}
+.qiehuan2_1_1 a:hover,.left1 a:hover{color: #00A1E9}
+
 .search2_4{float: right;margin-right: 25px;color: #ccc}
 .search3_1{width: 300px;float: left;height: 40px;margin-top: -2px;}
 .searchname1{padding: 1px 0; width: 200px;height: 40px;border: solid 1px #2AB9E7;background: #F8F8F8;text-align: left}
@@ -76,7 +84,10 @@ a:hover{text-decoration: none}
 .daohang1_0 a:hover{background: #95E5FF;}
 .home1 a:hover,.home2 a:hover{background: #2A74E7}
 
-
+#main{width: 1250px;height: 600px;margin: 0 auto;background: #6DCAE7}
+#main1{width: 300px;height: 400px;background: #E9FF4C;float: left}
+#main2{width: 770px;height: 400px; background: #29C331;float: left}
+#main3{width: 180px;height: 400px; background: #C13F42;float: left}
 /*
 @keyframes frist{
 	from{background: #355EA6;}
