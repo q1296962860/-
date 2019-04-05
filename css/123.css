@@ -12,7 +12,7 @@ a:hover{text-decoration: none}
 .left1{height: 30px;}
 .choujiang1{background: url("../img/抽奖.png") no-repeat; background-size: 60px 20px;width: 60px;height: 20px;margin: 5px 8px 0 0;}
 .choujiang2{width: 60px;height: 20px;display: block;}
-#top .left.local1{width: 17px; height: 17px;}
+.time1{width: 60px;height: 20px;}
 .right{float: right}
 #top li{float: left;padding: 0 10px 0 0}
 #top .line{color: #ccc}

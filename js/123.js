@@ -51,3 +51,21 @@ function qiehuan2_2(id)
 	var text = document.getElementById(id).innerText;
 	document.getElementById("local_title1").innerText = String(text);
 }
+
+function time(){
+	var tm = new Date();
+	var h = tm.getHours();
+	var m = tm.getHours();
+	var s = tm.getSeconds();
+	m = check(m);
+	s = check(s);
+	tm = h+":"+m+":"+s
+	document.getElementById("time1_1").innerHTML = String(tm);
+}
+function check(a){
+	if(a<10){
+		a = "0"+a;
+	}
+	return a;
+}
+setInterval(time,1000);
