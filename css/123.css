@@ -93,6 +93,7 @@ a:hover{text-decoration: none}
 #menu dt{width: 270px;height: 30px;font-size: 17px;line-height: 28px;color: #000;font-weight: 600;margin-left: 8px;}
 #menu dd{width: 270px;height: 25px;margin-left: 4px;font-size: 13px;}
 #menu a{margin-left: 4px;}
+#menu a:hover{color: #00A1E9}
 #menu .menu1{margin-top: 12px;}
 #menu .menu6{background: url("../img/flw.png") no-repeat 120px 8px;}
 #menu .menu7{border-bottom: 1px solid #FFFFFF; background: url("../img/zpk.png") no-repeat 190px 10px;}
