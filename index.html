@@ -5,8 +5,7 @@
 
 <title>JS实验：驴妈妈旅游网</title>
 <link rel="shortcut icon" href=" /favicon.ico" />
-<script type="text/javascript" src="js/123.js">
-</script>
+<script type="text/javascript" src="js/123.js"></script>
 <link href="css/123.css" rel="stylesheet" type="text/css"/>
 </head>
 
@@ -127,7 +126,12 @@
 			<li class="choujiang1"><a href="choujiang.html" class="choujiang2"></a></li>
 		</ul>
 		<ul>
-			<li class="time1">系统时间&nbsp;&nbsp;<a id="time1_1"></a></li>
+			<li class="time1">
+				<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" style="font-size:12px">北京时间：</a>
+				<span id="Beijing_z43d" style="font-size:12px"></span>
+				<script src="//widget.time.is/t.js"></script>
+				<script>time_is_widget.init({Beijing_z43d:{}});</script>
+			</li>
 		</ul>
 		<ul class="right">
 			<li class="list" onMouseOver="change1('list_cur','block')" onMouseOut="change1('list_cur','none')">
