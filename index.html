@@ -127,10 +127,16 @@
 		</ul>
 		<ul>
 			<li class="time1">
+				<!--因为调用时间函数显示时间会在一段时间后产生极大误差且无法避免，在此沿用了https://time.is/的时钟小工具-->
+				<!--begin-->
 				<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" style="font-size:12px">北京时间：</a>
 				<span id="Beijing_z43d" style="font-size:12px"></span>
 				<script src="//widget.time.is/t.js"></script>
 				<script>time_is_widget.init({Beijing_z43d:{}});</script>
+				<!--begin-->
+				<!--原位置代码为：
+					系统时间&nbsp;&nbsp;<a id="time1_1"></a>
+				-->
 			</li>
 		</ul>
 		<ul class="right">
