@@ -36,14 +36,21 @@ a:hover{text-decoration: none}
 .right #list_cur a{display: block;padding: 0 15px;line-height: 28px;color: #6C6C6C;}
 .right #list_cur a:hover{background: #f5f5f5;color: #00A1E9}
 .right a:hover,.left1 a:hover{color: #00A1E9}
-.wechat1{background: url("../img/微信.png")no-repeat;background-size: 20px 20px;width: 50px;height: 17px;margin-top: 5px;}
+.wechat1{background: url("../img/微信.png")no-repeat;background-size: 20px 20px;width: 50px;height: 17px;margin-top: 5px;position: relative;}
 .wechat2{display: block;width: 45px;height: 30px;margin-top: -6px;text-align: right;}
-.webo1{background: url("../img/微博.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 7px;}
+#qr1{width: 100px;display: none;position: absolute;left: -20px;top:20px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
+
+.webo1{background: url("../img/微博.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 7px;position: relative;}
 .webo2{display: block;width: 45px;height: 30px;margin-top: -8px;text-align: right;}
-.mobiphone1{background: url("../img/手机.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 7px;}
+#qr2{width: 100px;display: none;position: absolute;left: -20px;top:20px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
+
+.mobiphone1{background: url("../img/手机.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 7px;position: relative}
 .mobiphone2{display: block;width: 55px;height: 30px;margin-top: -8px;text-align: right;}
-.phone1{background: url("../img/24小时电话.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 8px;}
+#qr3{width: 100px;display: none;position: absolute;left: -20px;top:20px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
+
+.phone1{background: url("../img/24小时电话.png")no-repeat;background-size: 15px 15px;width: 50px;height: 17px;margin-top: 8px;position: relative}
 .phone2{display: block;width: 83px;height: 30px;margin-top: -8px;text-align: right;}
+#qr4{width: 100px;display: none;position: absolute;left: -15px;top:20px;background-color: #fff ;border: 1px solid #eee;z-index: 3;}
 
 #search{width: 1250px;height: 74px;margin: auto;}
 .logo1{width: 281px;height: 44px;margin:15px 0 0 -300px;float: left;background: url("../img/图层 2.png")no-repeat;}
