@@ -136,6 +136,7 @@ a:hover{text-decoration: none}
 #main3 p{font-size: 50px;color: #000;}
 
 #footer{width: 100%;height: 130px;line-height: 26px;background: darkgray;color: #fff;text-align: center;padding-top: 30px;}
+.footer1{width: 1250px;height: 130px;margin: auto}
 #footer p{font-size: 15px;margin: auto;width: 1250px;}
 /*
 @keyframes frist{
