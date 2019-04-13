@@ -129,11 +129,11 @@
 			<li class="time1">
 				<!--因为调用时间函数显示时间会在一段时间后产生极大误差且无法避免，在此沿用了https://time.is/的时钟小工具-->
 				<!--begin-->
-				<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" style="font-size:12px">北京时间：</a>
+				<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" style="font-size:12px">现在时间：</a>
 				<span id="Beijing_z43d" style="font-size:12px"></span>
 				<script src="//widget.time.is/t.js"></script>
 				<script>time_is_widget.init({Beijing_z43d:{}});</script>
-				<!--begin-->
+				<!--end-->
 				<!--原位置代码为：
 					系统时间&nbsp;&nbsp;<a id="time1_1"></a>
 				-->
@@ -240,19 +240,127 @@
 <div id="daohang_bg">
 	<div id="daohang1">
 		<ul class="daohang1_0">
-			<li class="home1"><a  href="index.html" class="home2">首页</a></li>
-			<li class="daohang1_1"><a  href="confirm.html" class="daohang2_1">出境游</a></li>
-			<li class="daohang1_2"><a  href="confirm.html" class="daohang2_2">国内游</a></li>
-			<li class="daohang1_3"><a  href="confirm.html" class="daohang2_3">周边游</a></li>
-			<li class="daohang1_4"><a  href="confirm.html" class="daohang2_4">景点门票</a></li>
-			<li class="daohang1_5"><a  href="confirm.html" class="daohang2_5">度假酒店</a></li>
-			<li class="daohang1_6"><a  href="confirm.html" class="daohang2_6">自驾游</a></li>
-			<li class="daohang1_7"><a  href="confirm.html" class="daohang2_7">亲子游</a></li>
-			<li class="daohang1_8"><a  href="confirm.html" class="daohang2_8">游轮</a></li>
-			<li class="daohang1_9"><a  href="confirm.html" class="daohang2_9">机票</a></li>
-			<li class="daohang1_10"><a  href="confirm.html" class="daohang2_10">特卖惠</a></li>
-			<li class="daohang1_11"><a  href="confirm.html" class="daohang2_11">定制游</a></li>
-			<li class="daohang1_12"><a  href="confirm.html" class="daohang2_12">旅游攻略</a></li>
+			<li class="home1"><a  href="index.html" class="home2 control1">首页</a></li>
+			<li class="daohang1_1" onMouseOver="change3('daohang1_cur1','block')" onMouseOut="change3('daohang1_cur1','none')">
+				<a href="confirm.html" class="daohang2_1 control1">出境游</a>
+				<div id="daohang1_cur1">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_2">出境首页</a>
+					<a href="confirm.html" class="daohang1_cur1_2">邮轮</a>
+					<a href="confirm.html" class="daohang1_cur1_2">签证</a>
+					<a href="confirm.html" class="daohang1_cur1_2">境外玩乐</a>
+					<a href="confirm.html" class="daohang1_cur1_2">WIFI/电话卡</a>
+					<a href="confirm.html" class="daohang1_cur1_2">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_2" onMouseOver="change3('daohang1_cur2','block')" onMouseOut="change3('daohang1_cur2','none')">
+				<a href="confirm.html" class="daohang2_2 control1">国内游</a>
+				<div id="daohang1_cur2">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_2">国内首页</a>
+					<a href="confirm.html" class="daohang1_cur1_2">机酒自由行</a>
+					<a href="confirm.html" class="daohang1_cur1_2">超级自由行</a>
+					<a href="confirm.html" class="daohang1_cur1_2">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_3" onMouseOver="change3('daohang1_cur3','block')" onMouseOut="change3('daohang1_cur3','none')">
+				<a  href="confirm.html" class="daohang2_3 control1">周边游</a>
+				<div id="daohang1_cur3">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_3 move1">周边游首页</a>
+					<a href="confirm.html" class="daohang1_cur1_3">酒店+景点</a>
+					<a href="confirm.html" class="daohang1_cur1_3">周边跟团</a>
+					<a href="confirm.html" class="daohang1_cur1_3">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_4" onMouseOver="change3('daohang1_cur4','block')" onMouseOut="change3('daohang1_cur4','none')">
+				<a  href="confirm.html" class="daohang2_4 control1">景点门票</a>
+				<div id="daohang1_cur4">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_4 move1">国内门票</a>
+					<a href="confirm.html" class="daohang1_cur1_4">境外门票</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_5" onMouseOver="change3('daohang1_cur5','block')" onMouseOut="change3('daohang1_cur5','none')">
+				<a  href="confirm.html" class="daohang2_5 control1">度假酒店</a>
+				<div id="daohang1_cur5">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_5 move1">国内酒店</a>
+					<a href="confirm.html" class="daohang1_cur1_5">境外酒店</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_6" onMouseOver="change3('daohang1_cur6','block')" onMouseOut="change3('daohang1_cur6','none')">
+				<a  href="confirm.html" class="daohang2_6 control1">自驾游</a>
+				<div id="daohang1_cur6">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_6 move1">自驾游首页</a>
+					<a href="confirm.html" class="daohang1_cur1_6">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_7" onMouseOver="change3('daohang1_cur7','block')" onMouseOut="change3('daohang1_cur7','none')">
+				<a  href="confirm.html" class="daohang2_7 control1">亲子游</a>
+				<div id="daohang1_cur7">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_7 move1">国内亲子游</a>
+					<a href="confirm.html" class="daohang1_cur1_7">境外亲子游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_8" onMouseOver="change3('daohang1_cur8','block')" onMouseOut="change3('daohang1_cur8','none')">
+				<a  href="confirm.html" class="daohang2_8 control1">邮轮</a>
+				<div id="daohang1_cur8">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_8 move1">邮轮首页</a>
+					<a href="confirm.html" class="daohang1_cur1_8">日本航线</a>
+					<a href="confirm.html" class="daohang1_cur1_8">海外航线</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_9" onMouseOver="change3('daohang1_cur9','block')" onMouseOut="change3('daohang1_cur9','none')">
+				<a  href="confirm.html" class="daohang2_9 control1">机票</a>
+				<div id="daohang1_cur9">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_9 move1">国内航线</a>
+					<a href="confirm.html" class="daohang1_cur1_9">港澳台航线</a>
+					<a href="confirm.html" class="daohang1_cur1_9">国外航线</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_10" onMouseOver="change3('daohang1_cur10','block')" onMouseOut="change3('daohang1_cur10','none')">
+				<a  href="confirm.html" class="daohang2_10 control1">特卖惠</a>
+				<div id="daohang1_cur10">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_10 move1">国内特卖惠</a>
+					<a href="confirm.html" class="daohang1_cur1_10">海外特卖惠</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_11" onMouseOver="change3('daohang1_cur11','block')" onMouseOut="change3('daohang1_cur11','none')">
+				<a  href="confirm.html" class="daohang2_11 control1">定制游</a>
+				<div id="daohang1_cur11">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_11 move1">个人定制游</a>
+					<a href="confirm.html" class="daohang1_cur1_11">企业定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_12" onMouseOver="change3('daohang1_cur12','block')" onMouseOut="change3('daohang1_cur12','none')">
+				<a  href="confirm.html" class="daohang2_12 control1">旅游攻略</a>
+				<div id="daohang1_cur12">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_12 move1">目的地</a>
+					<a href="confirm.html" class="daohang1_cur1_12">游记</a>
+					<a href="confirm.html" class="daohang1_cur1_12">驴游宝</a>
+					<a href="confirm.html" class="daohang1_cur1_12">问答</a>
+					</p>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>
