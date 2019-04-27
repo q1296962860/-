@@ -66,6 +66,28 @@ function change3(myid,mode)
 		 document.getElementById(myid).parentNode.style.border="";
 	 }
 }
+
+$(function(){
+	turn_top = document.getElementsByClassName("beside4_1");
+	turn_top.click = function(){
+		$("html, body").scrollTop(0);
+	}
+})
+//function change4(myid,mode)
+//{
+//	document.getElementById(myid).style.display=mode;
+//	if(mode == 'block')
+//	{
+//		document.getElementById(myid).style.border="1px solid #2AB9E7";
+//		document.getElementById(myid).style.borderTop="none";
+//	}
+// else
+//	 {
+//		 document.getElementById(myid).parentNode.style.backgroundColor="";
+//		 document.getElementById(myid).parentNode.style.border="";
+//	 }
+//}
+
 /*
 	省略的求时间函数：
 	function time(){

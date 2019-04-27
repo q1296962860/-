@@ -5,6 +5,7 @@
 
 <title>JS实验：驴妈妈旅游网</title>
 <link rel="shortcut icon" href=" /favicon.ico" />
+<script src="js/jquery-1.12.4.js"></script>
 <script type="text/javascript" src="js/123.js"></script>
 <link href="css/123.css" rel="stylesheet" type="text/css"/>
 </head>
@@ -499,22 +500,28 @@
 
 <!--侧边栏 begin-->
 <div id="beside">
-	<div class="beside1">
+	<div class="beside1" onMouseOver="change3('beside_photo1','block')" onMouseOut="change3('beside_photo1','none')">
 		<a href="confirm.html">
 			<div class="beside1_1"></div>
 			<div class="beside1_2"></div>
 			<div class="beside1_3"><p>APP</p></div>
 		</a>
+		<div id="beside_photo1">
+			<img alt="二维码" src="img/qr.png" width="100px">
+		</div>
 	</div>
-	<div class="beside2">
+	<div class="beside2" onMouseOver="change3('beside_photo2','block')" onMouseOut="change3('beside_photo2','none')">
 		<a href="confirm.html">
 			<div class="beside2_1"></div>
 			<div class="beside2_2"><p>小程序</p></div>
 		</a>
+		<div id="beside_photo2">
+			<img alt="二维码" src="img/qr.png" width="100px">
+		</div>
 	</div>
 	<div class="beside3">
 		<a href="confirm.html">
-			<div class="beside3_1">
+			<div class="beside3_1" id="beside_id1" onMouseOver="change4('beside_id1','block')" onMouseOut="change4('beside_id1','none')">
 				<div class="beside3_1_1"></div>
 				<div class="beside3_1_2"><p>登陆</p></div>
 			</div>
@@ -526,7 +533,11 @@
 		</a>
 	</div>
 	<div class="beside4">
-	
+		<a href="#">
+			<div class="beside4_1">
+				<div class="beside4_1_1"></div>
+			</div>
+		</a>
 	</div>
 </div>
 <!--侧边栏 end-->
