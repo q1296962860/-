@@ -33,14 +33,13 @@ $(function(){
 	banner_roll(banner_offset, banner_num);
 	
 	$("#main_banner>li").hover(function(){
-			clearInterval(banner_timer);
 			$(this).stop().siblings().fadeTo(100, 0.5);
 			$(this).stop().fadeTo(100, 1);
+			$(this).children(".banner_a").css({width:1070, height:400});
+
 		},function(){
-			var index = $(this).index();
-			var photo_offset = index*-1070;
-			banner_roll(photo_offset, index);
 			$("#main_banner>li").stop().fadeTo(100, 1);
+			$(this).children(".banner_a").css({width:0, height:0});
 		});
 	
 	
@@ -56,6 +55,21 @@ $(function(){
 			var index = $(this).index();
 			var photo_offset = index*-1070;
 			banner_roll(photo_offset, index);
+	});
+	//banner的滚动
+	
+	$(".main3_box>ul>li").mouseenter(function(){
+			$(this).addClass("main3_current");
+			$(this).siblings().removeClass("main3_current");
+		})
+	
+	
+	$(function(){
+	turn_top = document.getElementsByClassName("beside4_1");
+	turn_top.click(function(){
+		$("html, body").animate({marginTop:0},2000);
 	})
+		
+})
 	
 })

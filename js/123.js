@@ -1,3 +1,4 @@
+
 function change1(myid,mode)
 {
 	document.getElementById(myid).style.display=mode;
@@ -67,12 +68,7 @@ function change3(myid,mode)
 	 }
 }
 
-$(function(){
-	turn_top = document.getElementsByClassName("beside4_1");
-	turn_top.click = function(){
-		$("html, body").scrollTop(0);
-	}
-})
+
 //function change4(myid,mode)
 //{
 //	document.getElementById(myid).style.display=mode;
