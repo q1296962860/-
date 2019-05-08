@@ -62,14 +62,54 @@ $(function(){
 			$(this).addClass("main3_current");
 			$(this).siblings().removeClass("main3_current");
 		})
+	//折叠菜单
 	
+	$(".main3_tab_nav>li").mouseenter(function(){
+			$(this).addClass("main3_tab_current");
+			$(this).siblings().removeClass("main3_tab_current");
+			var index = $(this).index();
+			var $li = $(".main3_tab_content>li").eq(index);
+			$li.addClass("main3_tab_show");
+			$li.siblings().removeClass("main3_tab_show");
+		})
+	//TAB面板
+	
+	$(".beside4").mouseenter(function(){
+			$(".beside4_1_1").stop().animate({top:-20},500,function(){
+				$(".beside4_1_1").stop().animate({top:10},500,function(){
+					$(".beside4_1_1").stop().animate({top:0},500)});
+			});
+		});
+	
+	$(".beside4").click(function(){
+			$(".beside4_1_1").stop().animate({top:-60},500,function(){
+				$(".beside4_1_1").css("top","80px");
+				$(".beside4_1_1").stop().animate({top:-10},400,function(){
+					$(".beside4_1_1").stop().animate({top:0},200)});
+			});
+		});
+	//top键
+	
+	$(window).scroll(function(){
+			var offset = ($("html").scrollTop()+$("body").scrollTop());
+			if(offset >= 400){
+				$(".back_top").stop().animate({top:0},500);
+			}
+			else{
+				$(".back_top").stop().animate({top:-900},500);
+			}
+		})
+	//scroll-to-top
 	
 	$(function(){
-	turn_top = document.getElementsByClassName("beside4_1");
-	turn_top.click(function(){
-		$("html, body").animate({marginTop:0},2000);
-	})
-		
-})
-	
+	$(".beside4_1, .back_top").click(function(){
+		if(($("html").scrollTop()+$("body").scrollTop()) != 0){
+		$("html, body").stop().animate({scrollTop:0},500).animate({marginTop:10},200).animate({marginTop:0},200);
+		}
+		else{
+			$("html, body").stop().animate({marginTop:10},200).animate({marginTop:0},200);
+		}
+		})
+	});
+	//top与back_top按钮
 })
