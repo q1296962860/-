@@ -33,12 +33,12 @@ $(function(){
 	banner_roll(banner_offset, banner_num);
 	
 	$("#main_banner>li").hover(function(){
-			$(this).stop().siblings().fadeTo(100, 0.5);
-			$(this).stop().fadeTo(100, 1);
+//			$(this).stop().siblings().fadeTo(100, 0.5);
+//			$(this).stop().fadeTo(100, 1);
 			$(this).children(".banner_a").css({width:1070, height:400});
 
 		},function(){
-			$("#main_banner>li").stop().fadeTo(100, 1);
+//			$("#main_banner>li").stop().fadeTo(100, 1);
 			$(this).children(".banner_a").css({width:0, height:0});
 		});
 	
@@ -96,7 +96,7 @@ $(function(){
 				$(".back_top").stop().animate({top:0},500);
 			}
 			else{
-				$(".back_top").stop().animate({top:-900},500);
+				$(".back_top").stop().animate({top:-600},300);
 			}
 		})
 	//scroll-to-top
