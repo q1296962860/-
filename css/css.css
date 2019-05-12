@@ -152,7 +152,7 @@ a:hover{text-decoration: none}
 .main3_content{overflow: hidden; margin-top: 5px;display: none}
 .main3_current .main3_content{display: block}
 
-.main3_tab{width: 948px;height: 812px;background: rgba(240,131,0,0.50);float: left;}
+.main3_tab{width: 948px;height: 812px;background: rgba(233,207,52,0.50);float: left;}
 .main3_tab>h1{font-size: 20px; line-height: 37px; color: #00A1E9; padding-left: 347px;width: 200px;text-align: center}
 .main3_tab_nav>li{list-style: none; width: 237px; height: 50px; background: #2AB9E7; text-align: center; line-height: 50px; float: left;}
 .main3_tab_nav>li>a:hover{color: #00A1E9}
