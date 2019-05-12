@@ -17,7 +17,7 @@ $(function(){
 			}
 			else{
 			$("#main_banner").stop().animate({marginLeft:offset}, 1000);
-			};
+			}
 			
 			if(num%7 == 6){
 				$("#main_nav>button").eq(0).addClass("current");
@@ -33,12 +33,9 @@ $(function(){
 	banner_roll(banner_offset, banner_num);
 	
 	$("#main_banner>li").hover(function(){
-//			$(this).stop().siblings().fadeTo(100, 0.5);
-//			$(this).stop().fadeTo(100, 1);
 			$(this).children(".banner_a").css({width:1070, height:400});
 
 		},function(){
-//			$("#main_banner>li").stop().fadeTo(100, 1);
 			$(this).children(".banner_a").css({width:0, height:0});
 		});
 	
@@ -87,22 +84,37 @@ $(function(){
 				$(".beside4_1_1").stop().animate({top:-10},400,function(){
 					$(".beside4_1_1").stop().animate({top:0},200)});
 			});
+			if(($("html").scrollTop()+$("body").scrollTop()) != 0){
+			$("html, body").stop().animate({scrollTop:0},500).animate({marginTop:10},200).animate({marginTop:0},200);
+			}
+			else{
+				$("html, body").stop().animate({marginTop:10},200).animate({marginTop:0},200);
+		}
 		});
+
 	//top键
+	
+	$(".back_top").mouseenter(function(){
+			$(this).stop().animate({top:-30},500,function(){
+				$(this).stop().animate({top:0},500,function(){
+					$(this).stop().animate({top:-10},500)});
+			});
+		});
 	
 	$(window).scroll(function(){
 			var offset = ($("html").scrollTop()+$("body").scrollTop());
 			if(offset >= 400){
-				$(".back_top").stop().animate({top:0},500);
+				$(".back_top").stop().animate({top:0},500,function(){
+					$(".back_top").stop().animate({top:-30},500,function(){
+						$(".back_top").stop().animate({top:-10},500)});
+				});
 			}
 			else{
 				$(".back_top").stop().animate({top:-600},300);
 			}
 		})
-	//scroll-to-top
 	
-	$(function(){
-	$(".beside4_1, .back_top").click(function(){
+	$(".back_top").click(function(){
 		if(($("html").scrollTop()+$("body").scrollTop()) != 0){
 		$("html, body").stop().animate({scrollTop:0},500).animate({marginTop:10},200).animate({marginTop:0},200);
 		}
@@ -110,6 +122,6 @@ $(function(){
 			$("html, body").stop().animate({marginTop:10},200).animate({marginTop:0},200);
 		}
 		})
-	});
-	//top与back_top按钮
+	//scroll-to-top
+
 })
