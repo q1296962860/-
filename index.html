@@ -6,8 +6,9 @@
 <title>JS实验：驴妈妈旅游网</title>
 <link rel="shortcut icon" href=" /favicon.ico" />
 <script src="js/jquery-1.12.4.js"></script>
-<script type="text/javascript" src="js/js.js"></script>
+<script src="jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
 <link href="css/css.css" rel="stylesheet" type="text/css"/>
 </head>
 
@@ -19,112 +20,112 @@
 		<ul class="left">
 			<li class="local1"><img src="img/local.png" alt="" id="local1_1"></li>
 			<li><a id="local_title">黄石</a></li>
-			<li class="left1" onMouseOver="change2('qiehuan1','block')" onMouseOut="change2('qiehuan1','none')">
-				<a>[切换]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<li class="left1 left1_main">
+				<a class="left1_tab">[切换]</a>&nbsp;&nbsp;&nbsp;&nbsp;
 				<div id="qiehuan1">
 					<p>可选省市列表</p>
 					<dl class="dl1">
 						<dt>华北</dt>
-						<dd><a href="#" onClick="change_name('text_1_1')" id="text_1_1">红石</a> 
-							<a href="#" onClick="change_name('text_1_2')" id="text_1_2">橙石</a> 
-							<a href="#" onClick="change_name('text_1_3')" id="text_1_3">黄石</a> 
-							<a href="#" onClick="change_name('text_1_4')" id="text_1_4">绿石</a>
-							<a href="#" onClick="change_name('text_1_5')" id="text_1_5">青石</a> 
-							<a href="#" onClick="change_name('text_1_6')" id="text_1_6">蓝石</a> 
-							<a href="#" onClick="change_name('text_1_7')" id="text_1_7">紫石</a> 
-							<a href="#" onClick="change_name('text_1_8')" id="text_1_8">粉石</a> 
-							<a href="#" onClick="change_name('text_1_9')" id="text_1_9">白石</a> 
+						<dd><a href="#">红石</a> 
+							<a href="#">橙石</a> 
+							<a href="#">黄石</a> 
+							<a href="#">绿石</a>
+							<a href="#">青石</a> 
+							<a href="#">蓝石</a> 
+							<a href="#">紫石</a> 
+							<a href="#">粉石</a> 
+							<a href="#">白石</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华东</dt>
-						<dd><a href="#" onClick="change_name('text_2_1')" id="text_2_1">红土</a> 
-							<a href="#" onClick="change_name('text_2_2')" id="text_2_2">橙土</a> 
-							<a href="#" onClick="change_name('text_2_3')" id="text_2_3">黄土</a> 
-							<a href="#" onClick="change_name('text_2_4')" id="text_2_4">绿土</a>
-							<a href="#" onClick="change_name('text_2_5')" id="text_2_5">青土</a> 
-							<a href="#" onClick="change_name('text_2_6')" id="text_2_6">蓝土</a> 
-							<a href="#" onClick="change_name('text_2_7')" id="text_2_7">紫土</a> 
-							<a href="#" onClick="change_name('text_2_8')" id="text_2_8">粉土</a> 
-							<a href="#" onClick="change_name('text_2_9')" id="text_2_9">白土</a> 
+						<dd><a href="#">红土</a> 
+							<a href="#">橙土</a> 
+							<a href="#">黄土</a> 
+							<a href="#">绿土</a>
+							<a href="#">青土</a> 
+							<a href="#">蓝土</a> 
+							<a href="#">紫土</a> 
+							<a href="#">粉土</a> 
+							<a href="#">白土</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>东北</dt>
-						<dd><a href="#" onClick="change_name('text_3_1')" id="text_3_1">红水</a> 
-							<a href="#" onClick="change_name('text_3_2')" id="text_3_2">橙水</a> 
-							<a href="#" onClick="change_name('text_3_3')" id="text_3_3">黄水</a> 
-							<a href="#" onClick="change_name('text_3_4')" id="text_3_4">绿水</a>
-							<a href="#" onClick="change_name('text_3_5')" id="text_3_5">青水</a> 
-							<a href="#" onClick="change_name('text_3_6')" id="text_3_6">蓝水</a> 
-							<a href="#" onClick="change_name('text_3_7')" id="text_3_7">紫水</a> 
-							<a href="#" onClick="change_name('text_3_8')" id="text_3_8">粉水</a> 
-							<a href="#" onClick="change_name('text_3_9')" id="text_3_9">白水</a> 
+						<dd><a href="#">红水</a> 
+							<a href="#">橙水</a> 
+							<a href="#">黄水</a> 
+							<a href="#">绿水</a>
+							<a href="#">青水</a> 
+							<a href="#">蓝水</a> 
+							<a href="#">紫水</a> 
+							<a href="#">粉水</a> 
+							<a href="#">白水</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华中</dt>
-						<dd><a href="#" onClick="change_name('text_4_1')" id="text_4_1">红沙</a> 
-							<a href="#" onClick="change_name('text_4_2')" id="text_4_2">橙沙</a> 
-							<a href="#" onClick="change_name('text_4_3')" id="text_4_3">黄沙</a> 
-							<a href="#" onClick="change_name('text_4_4')" id="text_4_4">绿沙</a>
-							<a href="#" onClick="change_name('text_4_5')" id="text_4_5">青沙</a> 
-							<a href="#" onClick="change_name('text_4_6')" id="text_4_6">蓝沙</a> 
-							<a href="#" onClick="change_name('text_4_7')" id="text_4_7">紫沙</a> 
-							<a href="#" onClick="change_name('text_4_8')" id="text_4_8">粉沙</a> 
-							<a href="#" onClick="change_name('text_4_9')" id="text_4_9">白沙</a> 
+						<dd><a href="#">红沙</a> 
+							<a href="#">橙沙</a> 
+							<a href="#">黄沙</a> 
+							<a href="#">绿沙</a>
+							<a href="#">青沙</a> 
+							<a href="#">蓝沙</a> 
+							<a href="#">紫沙</a> 
+							<a href="#">粉沙</a> 
+							<a href="#">白沙</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华南</dt>
-						<dd><a href="#" onClick="change_name('text_5_1')" id="text_5_1">红木</a> 
-							<a href="#" onClick="change_name('text_5_2')" id="text_5_2">橙木</a> 
-							<a href="#" onClick="change_name('text_5_3')" id="text_5_3">黄木</a> 
-							<a href="#" onClick="change_name('text_5_4')" id="text_5_4">绿木</a>
-							<a href="#" onClick="change_name('text_5_5')" id="text_5_5">青木</a> 
-							<a href="#" onClick="change_name('text_5_6')" id="text_5_6">蓝木</a> 
-							<a href="#" onClick="change_name('text_5_7')" id="text_5_7">紫木</a> 
-							<a href="#" onClick="change_name('text_5_8')" id="text_5_8">粉木</a> 
-							<a href="#" onClick="change_name('text_5_9')" id="text_5_9">白木</a> 
+						<dd><a href="#">红木</a> 
+							<a href="#">橙木</a> 
+							<a href="#">黄木</a> 
+							<a href="#">绿木</a>
+							<a href="#">青木</a> 
+							<a href="#">蓝木</a> 
+							<a href="#">紫木</a> 
+							<a href="#">粉木</a> 
+							<a href="#">白木</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>西南</dt>
-						<dd><a href="#" onClick="change_name('text_6_1')" id="text_6_1">红云</a> 
-							<a href="#" onClick="change_name('text_6_2')" id="text_6_2">橙云</a> 
-							<a href="#" onClick="change_name('text_6_3')" id="text_6_3">黄云</a> 
-							<a href="#" onClick="change_name('text_6_4')" id="text_6_4">绿云</a>
-							<a href="#" onClick="change_name('text_6_5')" id="text_6_5">青云</a> 
-							<a href="#" onClick="change_name('text_6_6')" id="text_6_6">蓝云</a> 
-							<a href="#" onClick="change_name('text_6_7')" id="text_6_7">紫云</a> 
-							<a href="#" onClick="change_name('text_6_8')" id="text_6_8">粉云</a> 
-							<a href="#" onClick="change_name('text_6_9')" id="text_6_9">白云</a> 
+						<dd><a href="#">红云</a> 
+							<a href="#">橙云</a> 
+							<a href="#">黄云</a> 
+							<a href="#">绿云</a>
+							<a href="#">青云</a> 
+							<a href="#">蓝云</a> 
+							<a href="#">紫云</a> 
+							<a href="#">粉云</a> 
+							<a href="#">白云</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>西北</dt>
-						<dd><a href="#" onClick="change_name('text_7_1')" id="text_7_1">红草</a> 
-							<a href="#" onClick="change_name('text_7_2')" id="text_7_2">橙草</a> 
-							<a href="#" onClick="change_name('text_7_3')" id="text_7_3">黄草</a> 
-							<a href="#" onClick="change_name('text_7_4')" id="text_7_4">绿草</a>
-							<a href="#" onClick="change_name('text_7_5')" id="text_7_5">青草</a> 
-							<a href="#" onClick="change_name('text_7_6')" id="text_7_6">蓝草</a> 
-							<a href="#" onClick="change_name('text_7_7')" id="text_7_7">紫草</a> 
-							<a href="#" onClick="change_name('text_7_8')" id="text_7_8">粉草</a> 
-							<a href="#" onClick="change_name('text_7_9')" id="text_7_9">白草</a> 
+						<dd><a href="#">红草</a> 
+							<a href="#">橙草</a> 
+							<a href="#">黄草</a> 
+							<a href="#">绿草</a>
+							<a href="#">青草</a> 
+							<a href="#">蓝草</a> 
+							<a href="#">紫草</a> 
+							<a href="#">粉草</a> 
+							<a href="#">白草</a> 
 						</dd>
 					</dl>
 					<dl class="dl1_1">
 						<dt>港澳台</dt>
-						<dd><a href="#" onClick="change_name('text_8_1')" id="text_8_1">香港</a> 
-							<a href="#" onClick="change_name('text_8_2')" id="text_8_2">澳门</a> 
-							<a href="#" onClick="change_name('text_8_3')" id="text_8_3">台湾</a>  
+						<dd><a href="#">香港</a> 
+							<a href="#">澳门</a> 
+							<a href="#">台湾</a>  
 						</dd>
 					</dl>
 				</div>
 			</li>
-			<li class="left1"><a href="confirm.html" >请登陆</a>&nbsp;&nbsp;|</li>
-			<li class="left1"><a href="confirm.html" >免费注册</a></li>
+			<li class="left1"><a href="javascript:;" class="left1_login">请登录</a>&nbsp;&nbsp;|</li>
+			<li class="left1"><a href="javascript:;" class="left1_login">免费注册</a></li>
 			<li class="choujiang1"><a href="choujiang.html" class="choujiang2"></a></li>
 		</ul>
 		<ul>
@@ -142,7 +143,7 @@
 			</li>
 		</ul>
 		<ul class="right">
-			<li class="list" onMouseOver="change1('list_cur','block')" onMouseOut="change1('list_cur','none')">
+			<li class="list">
 				<span><a href="confirm.html" class="toplist1">我的驴妈妈</a></span>
 				<div id="list_cur">
 					<a href="confirm.html">我的订单</a>
@@ -154,26 +155,26 @@
 			<li><span><a href="confirm.html">积分商城</a></span></li>
 			<li><span><a href="confirm.html">帮助</a></span></li>
 			<li class="line">|</li>
-			<li class="wechat1" onMouseOver="change3('qr1','block')" onMouseOut="change3('qr1','none')">
+			<li class="wechat1">
 				<a href="confirm.html" class="wechat2">微信</a>
 				<div id="qr1">
 					<img alt="二维码" src="img/qr.png" width="100px">
 				</div>
 			</li>
-			<li class="webo1" onMouseOver="change3('qr2','block')" onMouseOut="change3('qr2','none')">
+			<li class="webo1">
 				<a href="confirm.html" class="webo2">微博</a>
 				<div id="qr2">
 					<img alt="二维码" src="img/qr.png" width="100px">
 				</div>
 			</li>
-			<li class="mobiphone1" onMouseOver="change3('qr3','block')" onMouseOut="change3('qr3','none')">
+			<li class="mobiphone1">
 				<a href="confirm.html" class="mobiphone2">手机版</a>
 				<div id="qr3">
 					<img alt="二维码" src="img/qr.png" width="100px">
 				</div>
 			</li>
 			<li class="line">|</li>
-			<li class="phone1" onMouseOver="change3('qr4','block')" onMouseOut="change3('qr4','none')">
+			<li class="phone1">
 				<a href="confirm.html" class="phone2">1010-6060</a>
 				<div id="qr4">
 					<img alt="二维码" src="img/qr.png" width="100px">
@@ -192,39 +193,39 @@
 		<ul>
 			<li class="search1_1"><a class="search1_2" href="confirm.html">所有产品</a></li>
 			<li class="search2_1">
-				<div class="search2_2"  onMouseOver="change2('qiehuan2','block')" onMouseOut="change2('qiehuan2','none')">
+				<div class="search2_2">
 					<a href="#" class="search2_3"><span id="local_title1">黄石</span><span class="search2_4">出发</span></a>
 					<div id="qiehuan2">
 						<div class="qiehuan2_1">
 							<p>热门出发城市</p>
 							<div class="qiehuan2_1_1">
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_1')" id="qiehuan_1_1">红石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_2')" id="qiehuan_1_2">橙石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_3')" id="qiehuan_1_3">黄石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_4')" id="qiehuan_1_4">绿石</a>
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_5')" id="qiehuan_1_5">青石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_6')" id="qiehuan_1_6">蓝石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_7')" id="qiehuan_1_7">紫石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_8')" id="qiehuan_1_8">粉石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_9')" id="qiehuan_1_9">白石</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_10')" id="qiehuan_1_10">红土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_11')" id="qiehuan_1_11">橙土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_12')" id="qiehuan_1_12">黄土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_13')" id="qiehuan_1_13">绿土</a>
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_14')" id="qiehuan_1_14">青土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_15')" id="qiehuan_1_15">蓝土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_16')" id="qiehuan_1_16">紫土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_17')" id="qiehuan_1_17">粉土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_18')" id="qiehuan_1_18">白土</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_19')" id="qiehuan_1_19">红水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_20')" id="qiehuan_1_20">橙水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_21')" id="qiehuan_1_21">黄水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_22')" id="qiehuan_1_22">绿水</a>
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_23')" id="qiehuan_1_23">青水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_24')" id="qiehuan_1_24">蓝水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_25')" id="qiehuan_1_25">紫水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_26')" id="qiehuan_1_26">粉水</a> 
-								<a href="#" onClick="qiehuan2_2('qiehuan_1_27')" id="qiehuan_1_27">白水</a> 
+								<a href="#">红石</a> 
+								<a href="#">橙石</a> 
+								<a href="#">黄石</a> 
+								<a href="#">绿石</a>
+								<a href="#">青石</a> 
+								<a href="#">蓝石</a> 
+								<a href="#">紫石</a> 
+								<a href="#">粉石</a> 
+								<a href="#">白石</a> 
+								<a href="#">红土</a> 
+								<a href="#">橙土</a> 
+								<a href="#">黄土</a> 
+								<a href="#">绿土</a>
+								<a href="#">青土</a> 
+								<a href="#">蓝土</a> 
+								<a href="#">紫土</a> 
+								<a href="#">粉土</a> 
+								<a href="#">白土</a> 
+								<a href="#">红水</a> 
+								<a href="#">橙水</a> 
+								<a href="#">黄水</a> 
+								<a href="#">绿水</a>
+								<a href="#">青水</a> 
+								<a href="#">蓝水</a> 
+								<a href="#">紫水</a> 
+								<a href="#">粉水</a> 
+								<a href="#">白水</a> 
 							</div>
 						</div>
 					</div>
@@ -263,7 +264,7 @@
 	<div id="daohang1">
 		<ul class="daohang1_0">
 			<li class="home1"><a  href="index.html" class="home2 control1">首页</a></li>
-			<li class="daohang1_1" onMouseOver="change3('daohang1_cur1','block')" onMouseOut="change3('daohang1_cur1','none')">
+			<li class="daohang1_1">
 				<a href="confirm.html" class="daohang2_1 control1">出境游</a>
 				<div id="daohang1_cur1">
 					<p class="daohang1_cur1_1" >
@@ -276,7 +277,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_2" onMouseOver="change3('daohang1_cur2','block')" onMouseOut="change3('daohang1_cur2','none')">
+			<li class="daohang1_2">
 				<a href="confirm.html" class="daohang2_2 control1">国内游</a>
 				<div id="daohang1_cur2">
 					<p class="daohang1_cur1_1" >
@@ -287,7 +288,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_3" onMouseOver="change3('daohang1_cur3','block')" onMouseOut="change3('daohang1_cur3','none')">
+			<li class="daohang1_3">
 				<a  href="confirm.html" class="daohang2_3 control1">周边游</a>
 				<div id="daohang1_cur3">
 					<p class="daohang1_cur1_1" >
@@ -298,7 +299,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_4" onMouseOver="change3('daohang1_cur4','block')" onMouseOut="change3('daohang1_cur4','none')">
+			<li class="daohang1_4">
 				<a  href="confirm.html" class="daohang2_4 control1">景点门票</a>
 				<div id="daohang1_cur4">
 					<p class="daohang1_cur1_1" >
@@ -307,7 +308,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_5" onMouseOver="change3('daohang1_cur5','block')" onMouseOut="change3('daohang1_cur5','none')">
+			<li class="daohang1_5">
 				<a  href="confirm.html" class="daohang2_5 control1">度假酒店</a>
 				<div id="daohang1_cur5">
 					<p class="daohang1_cur1_1" >
@@ -316,7 +317,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_6" onMouseOver="change3('daohang1_cur6','block')" onMouseOut="change3('daohang1_cur6','none')">
+			<li class="daohang1_6">
 				<a  href="confirm.html" class="daohang2_6 control1">自驾游</a>
 				<div id="daohang1_cur6">
 					<p class="daohang1_cur1_1" >
@@ -325,7 +326,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_7" onMouseOver="change3('daohang1_cur7','block')" onMouseOut="change3('daohang1_cur7','none')">
+			<li class="daohang1_7">
 				<a  href="confirm.html" class="daohang2_7 control1">亲子游</a>
 				<div id="daohang1_cur7">
 					<p class="daohang1_cur1_1" >
@@ -334,7 +335,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_8" onMouseOver="change3('daohang1_cur8','block')" onMouseOut="change3('daohang1_cur8','none')">
+			<li class="daohang1_8">
 				<a  href="confirm.html" class="daohang2_8 control1">邮轮</a>
 				<div id="daohang1_cur8">
 					<p class="daohang1_cur1_1" >
@@ -344,7 +345,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_9" onMouseOver="change3('daohang1_cur9','block')" onMouseOut="change3('daohang1_cur9','none')">
+			<li class="daohang1_9">
 				<a  href="confirm.html" class="daohang2_9 control1">机票</a>
 				<div id="daohang1_cur9">
 					<p class="daohang1_cur1_1" >
@@ -354,7 +355,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_10" onMouseOver="change3('daohang1_cur10','block')" onMouseOut="change3('daohang1_cur10','none')">
+			<li class="daohang1_10">
 				<a  href="confirm.html" class="daohang2_10 control1">特卖惠</a>
 				<div id="daohang1_cur10">
 					<p class="daohang1_cur1_1" >
@@ -363,7 +364,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_11" onMouseOver="change3('daohang1_cur11','block')" onMouseOut="change3('daohang1_cur11','none')">
+			<li class="daohang1_11">
 				<a  href="confirm.html" class="daohang2_11 control1">定制游</a>
 				<div id="daohang1_cur11">
 					<p class="daohang1_cur1_1" >
@@ -372,7 +373,7 @@
 					</p>
 				</div>
 			</li>
-			<li class="daohang1_12" onMouseOver="change3('daohang1_cur12','block')" onMouseOut="change3('daohang1_cur12','none')">
+			<li class="daohang1_12">
 				<a  href="confirm.html" class="daohang2_12 control1">旅游攻略</a>
 				<div id="daohang1_cur12">
 					<p class="daohang1_cur1_1" >
@@ -662,7 +663,7 @@
 
 <!--侧边栏 begin-->
 <div id="beside">
-	<div class="beside1" onMouseOver="change3('beside_photo1','block')" onMouseOut="change3('beside_photo1','none')">
+	<div class="beside1">
 		<a href="confirm.html">
 			<div class="beside1_1"></div>
 			<div class="beside1_2"></div>
@@ -672,7 +673,7 @@
 			<img alt="二维码" src="img/qr.png" width="100px">
 		</div>
 	</div>
-	<div class="beside2" onMouseOver="change3('beside_photo2','block')" onMouseOut="change3('beside_photo2','none')">
+	<div class="beside2">
 		<a href="confirm.html">
 			<div class="beside2_1"></div>
 			<div class="beside2_2"><p>小程序</p></div>
@@ -682,13 +683,13 @@
 		</div>
 	</div>
 	<div class="beside3">
-		<a href="confirm.html">
-			<div class="beside3_1" id="beside_id1" onMouseOver="change4('beside_id1','block')" onMouseOut="change4('beside_id1','none')">
+		<a href="javascript:;">
+			<div class="beside3_1" id="beside_id1">
 				<div class="beside3_1_1"></div>
-				<div class="beside3_1_2"><p>登陆</p></div>
+				<div class="beside3_1_2"><p>登录</p></div>
 			</div>
 		</a>
-		<a href="confirm.html">
+		<a href="javascript:;">
 			<div class="beside3_2">
 				<div class="beside3_2_1"><p>注册</p></div>
 			</div>
@@ -706,5 +707,62 @@
 <div class="back_top"></div>
 <!--侧边栏 end-->
 
+<!--Login begin-->
+<div id="login" class="login_slect">
+	<div class="loginBox">
+		<div class="login_title">
+			<span>登录 / 注册</span>
+			<i class="login_cancel"></i>
+		</div>
+		<div class="login_main">
+			<div class="login_left">
+				<ul class="login_left_main">
+					<input type="text" placeholder="你的手机号/邮箱" class="login_left_input">
+					<div class="login_left_blank"></div>
+					<input type="password" placeholder="密码" class="login_left_input">
+					<div class="login_left_blank"></div>
+					<li>
+						<input type="checkbox">记住我
+						<span>不是自己的电脑上不要勾选此项</span>
+						<a href="javascript:;">忘记密码？</a>
+						<a href="javascript:;" class="login_left_a">无法验证？</a>
+					</li>
+					<div class="login_left_lg">
+						<a class="login_lg">登录</a>
+					</div>
+				</ul>
+			</div>
+			<div class="login_middum"></div>
+			<div class="login_right">
+				<ul class="login_right_main">
+					<input type="text" placeholder="昵称" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="password" placeholder="输入密码" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="password" placeholder="重复密码" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="text" placeholder="手机号/邮箱" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<li>
+						<input type="checkbox">
+						<span> 我已同意<a href="javascript:;">《用户使用协议》</a></span>
+					</li>
+					<div class="login_right_lg">
+						<a class="login_lg">注册</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Login end-->
+<!--Player begin-->
+<div id="player">
+	
+</div>
+<div id="player_mini">
+		
+</div>
+<!--Player end-->
 </body>
 </html>

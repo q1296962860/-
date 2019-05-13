@@ -1,5 +1,93 @@
 // JavaScript Document
 $(function(){
+	$(".left1_main").hover(function(){
+		$("#qiehuan1").stop().slideDown(500).css({border:"1px solid #2AB9E7"});
+		$("#local1_1").attr("src","img/local-after.png");
+		$("#local_title,.left1_tab").fadeIn().css("color","#00A1E9");
+	},function(){
+		$("#qiehuan1").stop().slideUp(500);
+		$("#local1_1").attr("src","img/local.png");
+		$("#local_title,.left1_tab").fadeIn().css("color","#6c6c6c");
+	})
+	
+	$(".list").hover(function(){
+		$("#list_cur").stop().slideDown(500).css({border:"1px solid #eee",borderTop:"none",background:"#fff",border:"1px solid #eee",borderBottom:"none"})
+	},function(){
+		$("#list_cur").stop().slideUp(500);
+	})
+	
+	$(".wechat1").hover(function(){
+		$("#qr1").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#qr1").stop().slideUp(500);
+	})
+	
+	$(".webo1").hover(function(){
+		$("#qr2").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#qr2").stop().slideUp(500);
+	})
+	
+	$(".mobiphone1").hover(function(){
+		$("#qr3").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#qr3").stop().slideUp(500);
+	})
+	
+	$(".phone1").hover(function(){
+		$("#qr4").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#qr4").stop().slideUp(500);
+	})
+	
+	$(".search2_2").hover(function(){
+		$("#qiehuan2").stop().slideDown(500).css({border:"1px solid #2AB9E7"});
+		$("#local1_1").attr("src","img/local-after.png");
+		$("#local_title").fadeIn().css("color","#00A1E9");
+	},function(){
+		$("#qiehuan2").stop().slideUp(500);
+		$("#local1_1").attr("src","img/local.png");
+		$("#local_title").fadeIn().css("color","#6c6c6c");
+	})
+	
+	$(".daohang1_0>li").hover(function(){
+		$(this).find("div").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$(this).find("div").stop().slideUp(500);
+	})
+	
+	$(".beside1").hover(function(){
+		$("#beside_photo1").stop().fadeIn(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#beside_photo1").stop().fadeOut(500);
+	})
+	
+	$(".beside2").hover(function(){
+		$("#beside_photo2").stop().fadeIn(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#beside_photo2").stop().fadeOut(500);
+	})
+	
+	$(".beside3").hover(function(){
+		$("#beside_photo3").stop().fadeIn(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
+	},function(){
+		$("#beside_photo3").stop().fadeOut(500);
+	})
+	
+	$("#qiehuan1").find("a").click(function(){
+		var $text = $(this).text();
+		$("#local_title").text($text);
+		$("#local_title1").text($text);
+	})
+	
+	$("#qiehuan2").find("a").click(function(){
+		var $text = $(this).text();
+		$("#local_title1").text($text);
+	})
+	
+	
+	
+	
 	var banner_offset = 0;
 	var banner_timer;
 	var banner_num = 0;
@@ -123,5 +211,14 @@ $(function(){
 		}
 		})
 	//scroll-to-top
-
+	
+	$(".beside3, .left1_login").click(function(){
+		$("#login").stop().fadeIn().removeClass("login_slect");
+		$(".back_top").stop().animate({top:-600},300);
+	});
+	$(".login_cancel").click(function(){
+		$("#login").stop().fadeOut().addClass("login_slect");
+	})
+	
+	//LOGIN
 })
