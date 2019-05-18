@@ -1,4 +1,4 @@
-// JavaScript Document
+﻿// JavaScript Document
 $(function(){
 	$(".left1_main").hover(function(){
 		$("#qiehuan1").stop().slideDown(500).css({border:"1px solid #2AB9E7"});
@@ -9,12 +9,14 @@ $(function(){
 		$("#local1_1").attr("src","img/local.png");
 		$("#local_title,.left1_tab").fadeIn().css("color","#6c6c6c");
 	})
+	//local下拉菜单
 	
 	$(".list").hover(function(){
 		$("#list_cur").stop().slideDown(500).css({border:"1px solid #eee",borderTop:"none",background:"#fff",border:"1px solid #eee",borderBottom:"none"})
 	},function(){
 		$("#list_cur").stop().slideUp(500);
 	})
+	//驴妈妈下拉菜单
 	
 	$(".wechat1").hover(function(){
 		$("#qr1").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
@@ -39,6 +41,7 @@ $(function(){
 	},function(){
 		$("#qr4").stop().slideUp(500);
 	})
+	//二维码下拉菜单
 	
 	$(".search2_2").hover(function(){
 		$("#qiehuan2").stop().slideDown(500).css({border:"1px solid #2AB9E7"});
@@ -49,12 +52,14 @@ $(function(){
 		$("#local1_1").attr("src","img/local.png");
 		$("#local_title").fadeIn().css("color","#6c6c6c");
 	})
+	//搜索栏下拉菜单
 	
 	$(".daohang1_0>li").hover(function(){
 		$(this).find("div").stop().slideDown(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
 	},function(){
 		$(this).find("div").stop().slideUp(500);
 	})
+	//导航栏下拉菜单
 	
 	$(".beside1").hover(function(){
 		$("#beside_photo1").stop().fadeIn(500).css({border:"1px solid #2AB9E7",borderTop:"none"})
@@ -73,6 +78,7 @@ $(function(){
 	},function(){
 		$("#beside_photo3").stop().fadeOut(500);
 	})
+	//侧边栏图片菜单
 	
 	$("#qiehuan1").find("a").click(function(){
 		var $text = $(this).text();
@@ -84,9 +90,8 @@ $(function(){
 		var $text = $(this).text();
 		$("#local_title1").text($text);
 	})
-	
-	
-	
+	//local地点的切换功能
+
 	
 	var banner_offset = 0;
 	var banner_timer;
@@ -148,14 +153,18 @@ $(function(){
 			$(this).siblings().removeClass("main3_current");
 		})
 	//折叠菜单
-	
+
 	$(".main3_tab_nav>li").mouseenter(function(){
 			$(this).addClass("main3_tab_current");
 			$(this).siblings().removeClass("main3_tab_current");
 			var index = $(this).index();
 			var $li = $(".main3_tab_content>li").eq(index);
-			$li.addClass("main3_tab_show");
-			$li.siblings().removeClass("main3_tab_show");
+			$li.animate({opacity:1},300,function(){
+				$li.addClass("main3_tab_show");
+			})
+			$li.siblings().animate({opacity:0},300,function(){
+				$li.siblings().removeClass("main3_tab_show");
+			})
 		})
 	//TAB面板
 	
@@ -210,7 +219,7 @@ $(function(){
 			$("html, body").stop().animate({marginTop:10},200).animate({marginTop:0},200);
 		}
 		})
-	//scroll-to-top
+	//scroll-to-top功能
 	
 	$(".beside3, .left1_login").click(function(){
 		$("#login").stop().fadeIn().removeClass("login_slect");
@@ -220,5 +229,75 @@ $(function(){
 		$("#login").stop().fadeOut().addClass("login_slect");
 	})
 	
-	//LOGIN
+	//LOGIN功能
+	
+	
+	var change = 0;
+	$(".leftFloat ul li").hover(function(){
+		if(change%2 == 0){
+			$(this).addClass("leftFloatOn2");
+			$(this).siblings().removeClass("leftFloatOn2");
+		}else{
+			$(this).addClass("leftFloatOn1");
+			$(this).siblings().removeClass("leftFloatOn1");
+		}
+	},function(){
+		if(change%2 == 0){
+			$(this).removeClass("leftFloatOn2");
+		}else{
+			$(this).addClass("leftFloatOn1");
+			$(this).siblings().removeClass("leftFloatOn1");
+		}
+	});
+	
+	$(".leftFloat ul li").click(function(){
+		change++;
+		if(change%2 != 0){
+			$(this).addClass("leftFloatOn2");
+			$(this).siblings().removeClass("leftFloatOn1").removeClass("leftFloatOn2");
+		}else{
+			$(this).addClass("leftFloatOn1");
+			$(this).siblings().removeClass("leftFloatOn1").removeClass("leftFloatOn2");
+		}
+		var height = 500 * $(this).index();
+		$("html, body").stop().animate({scrollTop:1350+height}, 1000);
+	})
+	
+	$(window).scroll(function(){
+			var offset = ($("html").scrollTop()+$("body").scrollTop());
+			if(offset >= 1350){
+				$(".leftFloat").stop().slideDown(1000);
+			}
+			else{
+				$(".leftFloat").stop().slideUp(1000);
+			}
+			if(change %2 == 0){
+				var leftChange1 = "leftFloatOn1";
+				var leftChange2 = "";
+			}else{
+				var leftChange1 = "leftFloatOn2";
+				var leftChange2 = "leftFloatOn1";
+			}
+			if(offset < 1650){
+				$(".leftFloat ul li").eq(0).addClass(leftChange1);
+				$(".leftFloat ul li").eq(0).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}else if(offset < 2150){
+				$(".leftFloat ul li").eq(1).addClass(leftChange1);
+				$(".leftFloat ul li").eq(1).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}else if(offset < 2650){
+				$(".leftFloat ul li").eq(2).addClass(leftChange1);
+				$(".leftFloat ul li").eq(2).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}else if(offset < 3150){
+				$(".leftFloat ul li").eq(3).addClass(leftChange1);
+				$(".leftFloat ul li").eq(3).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}else if(offset < 3450){
+				$(".leftFloat ul li").eq(4).addClass(leftChange1);
+				$(".leftFloat ul li").eq(4).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}else{
+				$(".leftFloat ul li").eq(5).addClass(leftChange1);
+				$(".leftFloat ul li").eq(5).siblings().removeClass(leftChange1).removeClass(leftChange2);
+			}
+		})
+		//leftFloat
+
 })

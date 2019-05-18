@@ -4,12 +4,32 @@
 <meta charset="utf-8">
 
 <title>JS实验：驴妈妈旅游网</title>
-<link rel="shortcut icon" href=" /favicon.ico" />
+<link rel="shortcut icon" href="favicon.ico" />
 <script src="js/jquery-1.12.4.js"></script>
-<script src="jquery.mCustomScrollbar.concat.min.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
-<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script type="text/javascript" src="js/jQuery-Player.js"></script>
 <link href="css/css.css" rel="stylesheet" type="text/css"/>
+<script>
+	$(function (){
+		function time(){
+		var tm = new Date();
+		var h = tm.getHours();
+		var m = tm.getMinutes();
+		var s = tm.getSeconds();
+		m = check(m);
+		s = check(s);
+		tm = h+":"+m+":"+s
+		document.getElementById("time1_1").innerHTML = String(tm);
+		}
+		function check(a){
+		if(a<10){
+			a = "0"+a;
+		}
+		return a;
+	}
+	setInterval(time,1000);
+	});
+</script>
 </head>
 
 <body>
@@ -26,100 +46,100 @@
 					<p>可选省市列表</p>
 					<dl class="dl1">
 						<dt>华北</dt>
-						<dd><a href="#">红石</a> 
-							<a href="#">橙石</a> 
-							<a href="#">黄石</a> 
-							<a href="#">绿石</a>
-							<a href="#">青石</a> 
-							<a href="#">蓝石</a> 
-							<a href="#">紫石</a> 
-							<a href="#">粉石</a> 
-							<a href="#">白石</a> 
+						<dd><a href="javascript:;">红石</a> 
+							<a href="javascript:;">橙石</a> 
+							<a href="javascript:;">黄石</a> 
+							<a href="javascript:;">绿石</a>
+							<a href="javascript:;">青石</a> 
+							<a href="javascript:;">蓝石</a> 
+							<a href="javascript:;">紫石</a> 
+							<a href="javascript:;">粉石</a> 
+							<a href="javascript:;">白石</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华东</dt>
-						<dd><a href="#">红土</a> 
-							<a href="#">橙土</a> 
-							<a href="#">黄土</a> 
-							<a href="#">绿土</a>
-							<a href="#">青土</a> 
-							<a href="#">蓝土</a> 
-							<a href="#">紫土</a> 
-							<a href="#">粉土</a> 
-							<a href="#">白土</a> 
+						<dd><a href="javascript:;">红土</a> 
+							<a href="javascript:;">橙土</a> 
+							<a href="javascript:;">黄土</a> 
+							<a href="javascript:;">绿土</a>
+							<a href="javascript:;">青土</a> 
+							<a href="javascript:;">蓝土</a> 
+							<a href="javascript:;">紫土</a> 
+							<a href="javascript:;">粉土</a> 
+							<a href="javascript:;">白土</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>东北</dt>
-						<dd><a href="#">红水</a> 
-							<a href="#">橙水</a> 
-							<a href="#">黄水</a> 
-							<a href="#">绿水</a>
-							<a href="#">青水</a> 
-							<a href="#">蓝水</a> 
-							<a href="#">紫水</a> 
-							<a href="#">粉水</a> 
-							<a href="#">白水</a> 
+						<dd><a href="javascript:;">红水</a> 
+							<a href="javascript:;">橙水</a> 
+							<a href="javascript:;">黄水</a> 
+							<a href="javascript:;">绿水</a>
+							<a href="javascript:;">青水</a> 
+							<a href="javascript:;">蓝水</a> 
+							<a href="javascript:;">紫水</a> 
+							<a href="javascript:;">粉水</a> 
+							<a href="javascript:;">白水</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华中</dt>
-						<dd><a href="#">红沙</a> 
-							<a href="#">橙沙</a> 
-							<a href="#">黄沙</a> 
-							<a href="#">绿沙</a>
-							<a href="#">青沙</a> 
-							<a href="#">蓝沙</a> 
-							<a href="#">紫沙</a> 
-							<a href="#">粉沙</a> 
-							<a href="#">白沙</a> 
+						<dd><a href="javascript:;">红沙</a> 
+							<a href="javascript:;">橙沙</a> 
+							<a href="javascript:;">黄沙</a> 
+							<a href="javascript:;">绿沙</a>
+							<a href="javascript:;">青沙</a> 
+							<a href="javascript:;">蓝沙</a> 
+							<a href="javascript:;">紫沙</a> 
+							<a href="javascript:;">粉沙</a> 
+							<a href="javascript:;">白沙</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>华南</dt>
-						<dd><a href="#">红木</a> 
-							<a href="#">橙木</a> 
-							<a href="#">黄木</a> 
-							<a href="#">绿木</a>
-							<a href="#">青木</a> 
-							<a href="#">蓝木</a> 
-							<a href="#">紫木</a> 
-							<a href="#">粉木</a> 
-							<a href="#">白木</a> 
+						<dd><a href="javascript:;">红木</a> 
+							<a href="javascript:;">橙木</a> 
+							<a href="javascript:;">黄木</a> 
+							<a href="javascript:;">绿木</a>
+							<a href="javascript:;">青木</a> 
+							<a href="javascript:;">蓝木</a> 
+							<a href="javascript:;">紫木</a> 
+							<a href="javascript:;">粉木</a> 
+							<a href="javascript:;">白木</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>西南</dt>
-						<dd><a href="#">红云</a> 
-							<a href="#">橙云</a> 
-							<a href="#">黄云</a> 
-							<a href="#">绿云</a>
-							<a href="#">青云</a> 
-							<a href="#">蓝云</a> 
-							<a href="#">紫云</a> 
-							<a href="#">粉云</a> 
-							<a href="#">白云</a> 
+						<dd><a href="javascript:;">红云</a> 
+							<a href="javascript:;">橙云</a> 
+							<a href="javascript:;">黄云</a> 
+							<a href="javascript:;">绿云</a>
+							<a href="javascript:;">青云</a> 
+							<a href="javascript:;">蓝云</a> 
+							<a href="javascript:;">紫云</a> 
+							<a href="javascript:;">粉云</a> 
+							<a href="javascript:;">白云</a> 
 						</dd>
 					</dl>
 					<dl class="dl1">
 						<dt>西北</dt>
-						<dd><a href="#">红草</a> 
-							<a href="#">橙草</a> 
-							<a href="#">黄草</a> 
-							<a href="#">绿草</a>
-							<a href="#">青草</a> 
-							<a href="#">蓝草</a> 
-							<a href="#">紫草</a> 
-							<a href="#">粉草</a> 
-							<a href="#">白草</a> 
+						<dd><a href="javascript:;">红草</a> 
+							<a href="javascript:;">橙草</a> 
+							<a href="javascript:;">黄草</a> 
+							<a href="javascript:;">绿草</a>
+							<a href="javascript:;">青草</a> 
+							<a href="javascript:;">蓝草</a> 
+							<a href="javascript:;">紫草</a> 
+							<a href="javascript:;">粉草</a> 
+							<a href="javascript:;">白草</a> 
 						</dd>
 					</dl>
 					<dl class="dl1_1">
 						<dt>港澳台</dt>
-						<dd><a href="#">香港</a> 
-							<a href="#">澳门</a> 
-							<a href="#">台湾</a>  
+						<dd><a href="javascript:;">香港</a> 
+							<a href="javascript:;">澳门</a> 
+							<a href="javascript:;">台湾</a>  
 						</dd>
 					</dl>
 				</div>
@@ -130,16 +150,7 @@
 		</ul>
 		<ul>
 			<li class="time1">
-				<!--因为调用时间函数显示时间会在一段时间后产生极大误差且无法避免，在此沿用了https://time.is/的时钟小工具-->
-				<!--begin-->
-				<a href="https://time.is/Beijing" id="time_is_link" rel="nofollow" style="font-size:12px">现在时间：</a>
-				<span id="Beijing_z43d" style="font-size:12px"></span>
-				<script src="//widget.time.is/t.js"></script>
-				<script>time_is_widget.init({Beijing_z43d:{}});</script>
-				<!--end-->
-				<!--原位置代码为：
-					系统时间&nbsp;&nbsp;<a id="time1_1"></a>
-				-->
+				系统时间&nbsp;&nbsp;<a id="time1_1"></a>
 			</li>
 		</ul>
 		<ul class="right">
@@ -194,38 +205,38 @@
 			<li class="search1_1"><a class="search1_2" href="confirm.html">所有产品</a></li>
 			<li class="search2_1">
 				<div class="search2_2">
-					<a href="#" class="search2_3"><span id="local_title1">黄石</span><span class="search2_4">出发</span></a>
+					<a href="javascript:;" class="search2_3"><span id="local_title1">黄石</span><span class="search2_4">出发</span></a>
 					<div id="qiehuan2">
 						<div class="qiehuan2_1">
 							<p>热门出发城市</p>
 							<div class="qiehuan2_1_1">
-								<a href="#">红石</a> 
-								<a href="#">橙石</a> 
-								<a href="#">黄石</a> 
-								<a href="#">绿石</a>
-								<a href="#">青石</a> 
-								<a href="#">蓝石</a> 
-								<a href="#">紫石</a> 
-								<a href="#">粉石</a> 
-								<a href="#">白石</a> 
-								<a href="#">红土</a> 
-								<a href="#">橙土</a> 
-								<a href="#">黄土</a> 
-								<a href="#">绿土</a>
-								<a href="#">青土</a> 
-								<a href="#">蓝土</a> 
-								<a href="#">紫土</a> 
-								<a href="#">粉土</a> 
-								<a href="#">白土</a> 
-								<a href="#">红水</a> 
-								<a href="#">橙水</a> 
-								<a href="#">黄水</a> 
-								<a href="#">绿水</a>
-								<a href="#">青水</a> 
-								<a href="#">蓝水</a> 
-								<a href="#">紫水</a> 
-								<a href="#">粉水</a> 
-								<a href="#">白水</a> 
+								<a href="javascript:;">红石</a> 
+								<a href="javascript:;">橙石</a> 
+								<a href="javascript:;">黄石</a> 
+								<a href="javascript:;">绿石</a>
+								<a href="javascript:;">青石</a> 
+								<a href="javascript:;">蓝石</a> 
+								<a href="javascript:;">紫石</a> 
+								<a href="javascript:;">粉石</a> 
+								<a href="javascript:;">白石</a> 
+								<a href="javascript:;">红土</a> 
+								<a href="javascript:;">橙土</a> 
+								<a href="javascript:;">黄土</a> 
+								<a href="javascript:;">绿土</a>
+								<a href="javascript:;">青土</a> 
+								<a href="javascript:;">蓝土</a> 
+								<a href="javascript:;">紫土</a> 
+								<a href="javascript:;">粉土</a> 
+								<a href="javascript:;">白土</a> 
+								<a href="javascript:;">红水</a> 
+								<a href="javascript:;">橙水</a> 
+								<a href="javascript:;">黄水</a> 
+								<a href="javascript:;">绿水</a>
+								<a href="javascript:;">青水</a> 
+								<a href="javascript:;">蓝水</a> 
+								<a href="javascript:;">紫水</a> 
+								<a href="javascript:;">粉水</a> 
+								<a href="javascript:;">白水</a> 
 							</div>
 						</div>
 					</div>
@@ -645,7 +656,12 @@
 		</div>
 	</div>
 	<div id="main4">
-		
+		<div class="zone1">特卖模块</div>
+		<div class="zone2">出境模块</div>
+		<div class="zone3">国内模块</div>
+		<div class="zone4">周边模块</div>
+		<div class="zone5">门票模块</div>
+		<div class="zone6">酒店模块</div>
 	</div>
 </div>
 <!--主体 end-->
@@ -655,7 +671,7 @@
 	<div class="footer1">
 		<p>上海驴妈妈兴旅国际旅行社有限公司。旅行社业务经营许可证编号：L-SH-CJ00056</p>
 		<p>Copyright © 2019 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　营业执照　沪ICP备13011172号-3　增值电信业务经营许可证编号：沪B2-20100030</p>
-		<p>代码托管仓库：https://github.com/</p>
+		<p>代码托管仓库：https://github.com/q1296962860/q1296962860.github.io </p>
 		<p class="footer1_bg">注：本页面仅用于课题实验</p>
 	</div>
 </div>
@@ -756,13 +772,224 @@
 	</div>
 </div>
 <!--Login end-->
+
+<!--左导航 begin-->
+<div class="leftFloat">
+	<ul>
+		<li class="leftFloatOn1">特卖</li>
+		<li>出境</li>
+		<li>国内</li>
+		<li>周边</li>
+		<li>门票</li>
+		<li>酒店</li>
+	</ul>
+</div>
+<!--左导航 end-->
+
 <!--Player begin-->
-<div id="player">
-	
+<div class="play">
+	<div class="player player_small">
+		<div class="player_min">
+			<div class="backg3"></div>
+			<div class="backg4"></div>
+			<i></i>
+		</div>
+		<div class="player_max">
+			<i></i>
+			<div class="player_head">
+				<h1></h1>
+			</div>
+			<div class="player_body">
+				<div class="player_main">
+					<div class="player_left">
+						<div class="player_left_title">
+							<span>收藏</span>
+							<span>添加到</span>
+							<span>下载</span>
+							<span>删除</span>
+							<span>清空列表</span>
+						</div>
+						<div class="player_left_list">
+							<ul class="player_left_list_ul">
+								<li class="player_list_title">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number"></div>
+									<div class="player_list_name">歌曲</div>
+									<div class="player_list_singer">歌手</div>
+									<div class="player_list_time">时长</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">1</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">2</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">3</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">4</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">5</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">6</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">7</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">8</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">9</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">10</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">11</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">12</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">13</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">14</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">15</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">16</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="player_right">
+						<div class="player_right_pic">
+							<div class="song_info_img">
+								<img src="img/album_cover_player.png" alt="">
+								<img src="img/Aqours-LOGO.jpg" alt="">
+							</div>
+							<div class="song_info_name">
+								歌曲名称 TEST
+							</div>
+							<div class="song_info_singer">
+								歌手 TEST
+							</div>
+							<div class="song_info_album">
+								专辑名 TEST
+							</div>
+						</div>
+						<div class="player_right_lrc">
+							<ul class="song_lyric">
+								<li>第一条歌词</li>
+								<li>第二条歌词</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="player_footer">
+				<div class="player_footer_main">
+					<div class="player_footer_up"></div>
+					<div class="player_footer_pause"></div>
+					<div class="player_footer_down"></div>
+					<div class="player_footer_progress">
+						<div class="music_progress_top">
+							<span class="music_progress_name">TEST / TEST</span>
+							<span class="music_progress_time">00:00 / 04:23</span>
+						</div>
+						<div class="music_progress_bar">
+							<div class="music_progress_line">
+								<div class="music_progress_dot"></div>
+							</div>
+						</div>
+					</div>
+					<div class="music_voice_info">
+						<div class="music_voice_icon"></div>
+						<div class="music_voice_bar">
+							<div class="music_voice_line">
+								<div class="music_voice_dot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="backg1"></div>
+			<div class="backg2"></div>
+		</div>
+	</div>
 </div>
-<div id="player_mini">
-		
-</div>
+
 <!--Player end-->
 </body>
 </html>

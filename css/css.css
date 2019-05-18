@@ -109,7 +109,7 @@ a:hover{text-decoration: none}
 .daohang1_0 a:link,.daohang1_0 a:visited{color: white}
 .home1 a:hover,.home2 a:hover{background: #2A74E7}
 
-#main{width: 1250px;height: 2400px;margin: 0 auto;}
+#main{width: 1250px;height: 4200px;margin: 0 auto;}
 #main1{width: 1070px;height: 400px;float: left;position: relative}
 #main2{width: 180px;height: 400px; background: #B5E6F6;float: left;}
 #main_ban{overflow: hidden;float: left;width: 1070px;height: 400px;}
@@ -160,15 +160,23 @@ a:hover{text-decoration: none}
 .main3_tab_content>li{list-style: none; display: none}
 .main3_tab_content>.main3_tab_show{display: block}
 
-#main4{width: 1250px;height: 1200px;}
+#main4{width: 1250px;height: 3000px; background: rgba(42,185,231,0.40);}
+#main4 .zone1{width: 100%; height: 500px; }
+#main4 .zone2{width: 100%; height: 500px; }
+#main4 .zone3{width: 100%; height: 500px; }
+#main4 .zone4{width: 100%; height: 500px; }
+#main4 .zone5{width: 100%; height: 500px; }
+#main4 .zone6{width: 100%; height: 500px; }
+#main4 div{color: white; font-size: 100px; text-align: center;line-height: 500px;border: 30px solid #ddd; box-sizing: border-box; border-top: 0px;font-weight: 600}
+#main4 div:nth-child(1){border-top:30px solid #ddd;}
 
 
-#footer{width: 100%;height: 130px;line-height: 26px;background: darkgray;color: #fff;text-align: center;padding-top: 30px;}
+#footer{width: 100%;height: 130px;line-height: 26px;background: darkgray;color: #fff;text-align: center;padding-top: 30px;user-select: text}
 .footer1{width: 1250px;height: 130px;margin: auto}
 .footer1_bg{background: url("../img/SAKURA.png") no-repeat 722px,url("../img/DEMON.png") no-repeat 500px;}
 #footer p{font-size: 15px;margin: auto;width: 1250px;}
 
-#beside{width: 36px; height: 100%; position: fixed; background: #333;right: 0;bottom: 0;}
+#beside{width: 36px; height: 100%; position: fixed; background: #333;right: 0;bottom: 0;z-index: 3}
 .beside1{width: 36px; height: 86px; top:0%; position: relative;border-bottom: 1px solid #6F6F6F}
 .beside1_1{background: url("../img/maru.png") no-repeat 0px 5px; width: 23px; height: 30px; margin-left: 6px;}
 .beside1_2{width: 12px; height: 25px; background: url("../img/手机2.png") 0px 5px no-repeat;margin-left: 12px;}
@@ -223,9 +231,83 @@ a:hover{text-decoration: none}
 .login_right_lg a{width: 250px; height: 38px; margin-left: 82px; background: #2AB9E7; color: #fff; cursor: pointer;border: 1px solid #0381aa;display: block;line-height: 38px; text-align: center;font-size: 18px;border-radius: 6px}
 .login_lg:hover{background: #00A1E9;}
 
-#player{width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.60);z-index: 5;display: none}
-#player_mini{width: 400px; height: 100px; position: fixed; left: 0; bottom: 100px; background: #f08300; z-index: 4; border-bottom-right-radius: 10px;border-top-right-radius: 10px; opacity: 0.5;}
-#player_mini:hover{opacity: 1}
+
+.leftFloat{width: 36px; height: 240px; position: fixed; left: 100px; top: 100px; opacity: 1; border-radius: 10px; display: none;}
+.leftFloat ul li{width: 100%; height: 40px; border-bottom:1px solid #ddd; box-sizing: border-box; position: relative; border-radius: 10px; cursor: pointer; line-height: 40px; text-align: center;}
+.leftFloatOn1{background: #2AB9E7; color: #fff;}
+.leftFloatOn2{background: #2AB9E7; color: #fff;}
+
+
+
+
+.player{position: fixed;z-index: 5;}
+.player.player_small{width: 400px; height: 100px; left: 0; bottom: 100px; border-bottom-right-radius: 10px;border-top-right-radius: 10px; opacity: 0.5;}
+.player.player_small i{width: 30px; height: 30px; float: right; background: url("../img/max.png") no-repeat; position: absolute; right: 5px;top: 5px;cursor: pointer}
+.player_small .player_min{width: 400px; height: 100px; left: 0; bottom: 100px; z-index: 4; border-bottom-right-radius: 10px;border-top-right-radius: 10px;display: block;}
+.player_min .backg3{background: url("../img/banner1.jpg") no-repeat; background-size: cover!important; filter: blur(5px);width: 100%; height: 100%; position: absolute; top: 0; left: 0;border-bottom-right-radius: 10px;border-top-right-radius: 10px;}
+
+
+.player.player_big{width: 100%; height: 100%; top: 0; left: 0;  border-radius: 0; opacity: 1;}
+.player.player_big i{width: 30px; height: 30px; float: right; background: url("../img/min.png") no-repeat; position: absolute; right: 5px;top: 5px;cursor: pointer}
+.player_big .player_max{width: 100%; height: 100%; top: 0; left: 0; border-radius: 0;  position: relative; display: block}
+.player_head{width: 100%; height: 80px; }
+.player_head h1{background: url("../img/music.png") no-repeat; width: 80px; height: 80px; background-size: 80px 80px; margin: 0 auto;}
+.player_body{width: 100%; height: 100%; }
+.player_body .player_main{width: 1200px; height: 720px; margin: 0 auto;}
+.player_main .player_left{width: 800px; height: 100%; float: left;}
+.player_left .player_left_title{width: 100%; height: 100px; }
+.player_left_title span{width: 100px; height: 100px; float: left;  margin-left: 75px; border-radius: 50%; border: 2px solid #ddd; box-sizing: border-box; cursor: pointer; opacity: 0.5; text-align: center; line-height: 100px; color: #fff; font-size: 15px}
+.player_left_title span:hover{opacity: 1}
+.player_left_title span:nth-child(1){margin-left: 0;}
+.player_list_check{width: 40px; height: 50px; line-height: 50px; }
+.player_list_number{width: 30px; height: 50px; line-height: 50px; text-align: center;}
+.player_list_name{width: 383px; height: 50px; line-height: 50px; }
+.player_list_singer{width: 200px; height: 50px; line-height: 50px; }
+.player_list_time{width: 128px; height: 50px; line-height: 50px; }
+.player_left_list li div{float: left; height: 50px;}
+.player_left .player_left_list{width: 100%; height: 620px;  overflow: scroll; }
+.player_left_list li{width: 100%; height: 50px; border-bottom: 1px solid #ddd; box-sizing: border-box; color: #fff; opacity: 0.5}
+.player_left_list li:nth-child(1){border-top: 1px solid #ddd;}
+.player_left_list li:nth-child(17){border: 0px}
+.player_left_list li:hover{opacity: 1}
+
+.player_main .player_right{width: 400px; height: 100%; float: left;}
+.player_right .player_right_pic{width: 100%; height: 500px;  position: relative;}
+.player_right_pic .song_info_img{width: 300px; height: 300px; position: absolute; left: 50px; top: 45px;}
+.player_right_pic .song_info_img img{width: 200px; height: 200px; position: absolute; left: 50px; top: 50px;}
+.player_right_pic .song_info_img img:nth-child(1){float: left; left: 75px}
+.player_right_pic .song_info_name{float: left; top: 350px; left: 150px; position: absolute; text-align: center; color: #fff; font-size: 17px; opacity: 0.5}
+.player_right_pic .song_info_name:hover{opacity: 1}
+.player_right_pic .song_info_singer{float: left; top: 375px; left: 170px; position: absolute; text-align: center; color: #fff; font-size: 17px; opacity: 0.5}
+.player_right_pic .song_info_singer:hover{opacity: 1}
+.player_right_pic .song_info_album{float: left; top: 400px; left: 160px; position: absolute; text-align: center; color: #fff; font-size: 17px; opacity: 0.5}
+.player_right_pic .song_info_album:hover{opacity: 1}
+.player_right .player_right_lrc{width: 100%; height: 220px;}
+.song_lyric li{width: 100%; height: 35px; float: left; text-align: center; color: #fff; opacity: 0.5; font-size: 18px; line-height: 25px;}
+.song_lyric li:nth-child(1){color: #f08300;}
+.song_lyric li:hover{opacity: 1}
+
+.player_footer{width: 100%; height: 100px; position: absolute; bottom: 0; left: 0;}
+.player_footer_main{width: 1200px; height: 100%; margin: 0 auto;}
+.player_footer_main .player_footer_up,.player_footer_main .player_footer_pause,.player_footer_main .player_footer_down{width: 64px; height: 64px; float: left; margin-left: 30px; margin-top: 18px; cursor: pointer; border-radius: 50%}
+.player_footer_main .player_footer_up{background: url("../img/上一首.png") no-repeat;}
+.player_footer_main .player_footer_pause{background: url("../img/播放.png") no-repeat;}
+.player_footer_main .player_footer_down{background: url("../img/上一首.png") no-repeat; transform: rotate(180deg)}
+.player_footer_main .player_footer_progress{width: 700px; height: 80px; float: left; margin-top: 10px; margin-left: 5px;}
+.player_footer_progress .music_progress_top{width: 100%; height: 30px; font-size: 16px; line-height: 30px; color: #fff}
+.player_footer_main .music_progress_bar{width: 100%; height: 5px; background: #fff; margin-top: 10px; position: relative;}
+.music_progress_bar .music_progress_line{width: 0; height: 5px; background: #f08300; margin-top: 10px;}
+.music_progress_bar .music_progress_dot{width: 15px; height: 15px; background: #fff; border-radius: 50%; position: absolute; top: -5px; }
+.music_progress_top .music_progress_time{float: right;}
+.player_footer_main .music_voice_info{width: 200px; height: 80px; float: left; margin-top: 10px; margin-left: 5px; position: relative}
+.music_voice_info .music_voice_icon{background: url("../img/喇叭.png") no-repeat; background-size: 36px; width: 36px; height: 36px; float: left; margin-left: 15px; margin-top: 24px; cursor: pointer;}
+.music_voice_info .music_voice_bar{width: 138px; height: 5px; background: #fff; position: absolute; left: 62px; top: 40px;}
+.music_voice_bar .music_voice_line{width: 0; height: 5px; background: #f08300;}
+.music_voice_bar .music_voice_dot{width: 15px; height: 15px; background: #fff; border-radius: 50%; position: absolute; top: -5px; }
+
+.backg1{width: 100%; height: 100%; position: absolute; top: 0; left: 0;background: url("../img/banner1.jpg") no-repeat; background-size: cover!important; filter: blur(100px); z-index: -2; opacity: 0.95}
+.backg2,.backg4{width: 100%; height: 100%; position: absolute; top: 0; left: 0; background: rgba(0,0,0,0.35); z-index: -1; }
+.backg4{border-bottom-right-radius: 10px;border-top-right-radius: 10px;}
 /*
 @keyframes frist{
 	from{background: #355EA6;}
