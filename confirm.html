@@ -1,15 +1,732 @@
 <!doctype html>
 <html>
-<head>
+<head lang="en">
 <meta charset="utf-8">
+
 <title>确认页面</title>
-	<style type="text/css">
-		body{width: 1200px;height: auto;background: #EBC939;margin: auto}
-		h1{color: aqua;width: 500px;height: 200px;;line-height: 200px;margin: auto;text-align: center}
-	</style>
+<link rel="shortcut icon" href="favicon.ico" />
+<script src="js/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jQuery-Player.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css"/>
+<style>
+	#test_main{width: 1250px;height: auto; background: rgba(42,185,231,0.40); margin: 0 auto;}
+	#test_main .test_block{width: 100%; height: 500px;color: white; font-size: 50px; text-align: center;line-height: 500px;border: 30px solid #ddd; box-sizing: border-box; border-top: 0px;font-weight: 600}
+	#test_main .test_block:nth-child(1){border-top: 30px solid #ddd;}
+</style>
+<script>
+	$(function (){
+		function time(){
+		var tm = new Date();
+		var h = tm.getHours();
+		var m = tm.getMinutes();
+		var s = tm.getSeconds();
+		m = check(m);
+		s = check(s);
+		tm = h+":"+m+":"+s
+		document.getElementById("time1_1").innerHTML = String(tm);
+		}
+		function check(a){
+		if(a<10){
+			a = "0"+a;
+		}
+		return a;
+	}
+	setInterval(time,1000);
+	});
+</script>
 </head>
 
 <body>
-	<h1 align="center">测试链接跳转成功！</h1>
+	
+<!--标题栏 begin-->
+<div id="top_bg">
+	<div id="top">
+		<ul class="left">
+			<li class="local1"><img src="img/local.png" alt="" id="local1_1"></li>
+			<li><a id="local_title">黄石</a></li>
+			<li class="left1 left1_main">
+				<a class="left1_tab">[切换]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+				<div id="qiehuan1">
+					<p>可选省市列表</p>
+					<dl class="dl1">
+						<dt>华北</dt>
+						<dd><a href="javascript:;">红石</a> 
+							<a href="javascript:;">橙石</a> 
+							<a href="javascript:;">黄石</a> 
+							<a href="javascript:;">绿石</a>
+							<a href="javascript:;">青石</a> 
+							<a href="javascript:;">蓝石</a> 
+							<a href="javascript:;">紫石</a> 
+							<a href="javascript:;">粉石</a> 
+							<a href="javascript:;">白石</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>华东</dt>
+						<dd><a href="javascript:;">红土</a> 
+							<a href="javascript:;">橙土</a> 
+							<a href="javascript:;">黄土</a> 
+							<a href="javascript:;">绿土</a>
+							<a href="javascript:;">青土</a> 
+							<a href="javascript:;">蓝土</a> 
+							<a href="javascript:;">紫土</a> 
+							<a href="javascript:;">粉土</a> 
+							<a href="javascript:;">白土</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>东北</dt>
+						<dd><a href="javascript:;">红水</a> 
+							<a href="javascript:;">橙水</a> 
+							<a href="javascript:;">黄水</a> 
+							<a href="javascript:;">绿水</a>
+							<a href="javascript:;">青水</a> 
+							<a href="javascript:;">蓝水</a> 
+							<a href="javascript:;">紫水</a> 
+							<a href="javascript:;">粉水</a> 
+							<a href="javascript:;">白水</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>华中</dt>
+						<dd><a href="javascript:;">红沙</a> 
+							<a href="javascript:;">橙沙</a> 
+							<a href="javascript:;">黄沙</a> 
+							<a href="javascript:;">绿沙</a>
+							<a href="javascript:;">青沙</a> 
+							<a href="javascript:;">蓝沙</a> 
+							<a href="javascript:;">紫沙</a> 
+							<a href="javascript:;">粉沙</a> 
+							<a href="javascript:;">白沙</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>华南</dt>
+						<dd><a href="javascript:;">红木</a> 
+							<a href="javascript:;">橙木</a> 
+							<a href="javascript:;">黄木</a> 
+							<a href="javascript:;">绿木</a>
+							<a href="javascript:;">青木</a> 
+							<a href="javascript:;">蓝木</a> 
+							<a href="javascript:;">紫木</a> 
+							<a href="javascript:;">粉木</a> 
+							<a href="javascript:;">白木</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>西南</dt>
+						<dd><a href="javascript:;">红云</a> 
+							<a href="javascript:;">橙云</a> 
+							<a href="javascript:;">黄云</a> 
+							<a href="javascript:;">绿云</a>
+							<a href="javascript:;">青云</a> 
+							<a href="javascript:;">蓝云</a> 
+							<a href="javascript:;">紫云</a> 
+							<a href="javascript:;">粉云</a> 
+							<a href="javascript:;">白云</a> 
+						</dd>
+					</dl>
+					<dl class="dl1">
+						<dt>西北</dt>
+						<dd><a href="javascript:;">红草</a> 
+							<a href="javascript:;">橙草</a> 
+							<a href="javascript:;">黄草</a> 
+							<a href="javascript:;">绿草</a>
+							<a href="javascript:;">青草</a> 
+							<a href="javascript:;">蓝草</a> 
+							<a href="javascript:;">紫草</a> 
+							<a href="javascript:;">粉草</a> 
+							<a href="javascript:;">白草</a> 
+						</dd>
+					</dl>
+					<dl class="dl1_1">
+						<dt>港澳台</dt>
+						<dd><a href="javascript:;">香港</a> 
+							<a href="javascript:;">澳门</a> 
+							<a href="javascript:;">台湾</a>  
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li class="left1"><a href="javascript:;" class="left1_login">请登录</a>&nbsp;&nbsp;|</li>
+			<li class="left1"><a href="javascript:;" class="left1_login">免费注册</a></li>
+			<li class="choujiang1"><a href="choujiang.html" class="choujiang2"></a></li>
+		</ul>
+		<ul>
+			<li class="time1">
+				系统时间&nbsp;&nbsp;<a id="time1_1"></a>
+			</li>
+		</ul>
+		<ul class="right">
+			<li class="list">
+				<span><a href="confirm.html" class="toplist1">我的驴妈妈</a></span>
+				<div id="list_cur">
+					<a href="confirm.html">我的订单</a>
+					<a href="confirm.html">我的驴镑</a>
+					<a href="confirm.html">我的优惠券</a>
+					<a href="confirm.html">我的礼品卡</a>
+				</div>
+			</li>
+			<li><span><a href="confirm.html">积分商城</a></span></li>
+			<li><span><a href="confirm.html">帮助</a></span></li>
+			<li class="line">|</li>
+			<li class="wechat1">
+				<a href="confirm.html" class="wechat2">微信</a>
+				<div id="qr1">
+					<img alt="二维码" src="img/qr.png" width="100px">
+				</div>
+			</li>
+			<li class="webo1">
+				<a href="confirm.html" class="webo2">微博</a>
+				<div id="qr2">
+					<img alt="二维码" src="img/qr.png" width="100px">
+				</div>
+			</li>
+			<li class="mobiphone1">
+				<a href="confirm.html" class="mobiphone2">手机版</a>
+				<div id="qr3">
+					<img alt="二维码" src="img/qr.png" width="100px">
+				</div>
+			</li>
+			<li class="line">|</li>
+			<li class="phone1">
+				<a href="confirm.html" class="phone2">1010-6060</a>
+				<div id="qr4">
+					<img alt="二维码" src="img/qr.png" width="100px">
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--标题栏 end-->
+
+<!--搜索栏 begin-->
+<div id="search">
+	<div class="logo1"><a href="index.html" class="logo2"></a></div>
+	<div id="searchmain">
+		<div class="searchmain1">
+		<ul>
+			<li class="search1_1"><a class="search1_2" href="confirm.html">所有产品</a></li>
+			<li class="search2_1">
+				<div class="search2_2">
+					<a href="javascript:;" class="search2_3"><span id="local_title1">黄石</span><span class="search2_4">出发</span></a>
+					<div id="qiehuan2">
+						<div class="qiehuan2_1">
+							<p>热门出发城市</p>
+							<div class="qiehuan2_1_1">
+								<a href="javascript:;">红石</a> 
+								<a href="javascript:;">橙石</a> 
+								<a href="javascript:;">黄石</a> 
+								<a href="javascript:;">绿石</a>
+								<a href="javascript:;">青石</a> 
+								<a href="javascript:;">蓝石</a> 
+								<a href="javascript:;">紫石</a> 
+								<a href="javascript:;">粉石</a> 
+								<a href="javascript:;">白石</a> 
+								<a href="javascript:;">红土</a> 
+								<a href="javascript:;">橙土</a> 
+								<a href="javascript:;">黄土</a> 
+								<a href="javascript:;">绿土</a>
+								<a href="javascript:;">青土</a> 
+								<a href="javascript:;">蓝土</a> 
+								<a href="javascript:;">紫土</a> 
+								<a href="javascript:;">粉土</a> 
+								<a href="javascript:;">白土</a> 
+								<a href="javascript:;">红水</a> 
+								<a href="javascript:;">橙水</a> 
+								<a href="javascript:;">黄水</a> 
+								<a href="javascript:;">绿水</a>
+								<a href="javascript:;">青水</a> 
+								<a href="javascript:;">蓝水</a> 
+								<a href="javascript:;">紫水</a> 
+								<a href="javascript:;">粉水</a> 
+								<a href="javascript:;">白水</a> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<form class="search3_1">
+			<input type="text" placeholder="目的地、主题、签证或主题名称" class="searchname1">
+			<a class="search3_2" href="confirm.html"><img src="img/搜索.png" width="15px" alt="搜索" >&nbsp;搜索</a>
+		</form>
+		</div>
+	</div>
+	<div class="remind1">
+		<div class="remind2">
+			<img src="img/MIKAN.png" alt="MIKAN" width="48px">
+			<span>价格保证</span>
+		</div>
+		<div class="remind2">
+			<img src="img/BOAT.png" alt="BOAT" width="48px">
+			<span>退订保障</span>
+		</div>
+		<div class="remind2">
+			<img src="img/SUGAR.png" alt="SUGAR" width="48px">
+			<span>救援保障</span>
+		</div>
+		<div class="remind2">
+			<img src="img/PIANO.png" alt="PIANO" width="48px">
+			<span>24时服务</span>
+		</div>
+	</div>
+</div>
+<!--搜索栏 begin-->
+
+<!--导航栏 begin-->
+<div id="daohang_bg">
+	<div id="daohang1">
+		<ul class="daohang1_0">
+			<li class="home1"><a  href="index.html" class="home2 control1">首页</a></li>
+			<li class="daohang1_1">
+				<a href="confirm.html" class="daohang2_1 control1">出境游</a>
+				<div id="daohang1_cur1">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_2">出境首页</a>
+					<a href="confirm.html" class="daohang1_cur1_2">邮轮</a>
+					<a href="confirm.html" class="daohang1_cur1_2">签证</a>
+					<a href="confirm.html" class="daohang1_cur1_2">境外玩乐</a>
+					<a href="confirm.html" class="daohang1_cur1_2">WIFI/电话卡</a>
+					<a href="confirm.html" class="daohang1_cur1_2">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_2">
+				<a href="confirm.html" class="daohang2_2 control1">国内游</a>
+				<div id="daohang1_cur2">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_2">国内首页</a>
+					<a href="confirm.html" class="daohang1_cur1_2">机酒自由行</a>
+					<a href="confirm.html" class="daohang1_cur1_2">超级自由行</a>
+					<a href="confirm.html" class="daohang1_cur1_2">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_3">
+				<a  href="confirm.html" class="daohang2_3 control1">周边游</a>
+				<div id="daohang1_cur3">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_3 move1">周边游首页</a>
+					<a href="confirm.html" class="daohang1_cur1_3">酒店+景点</a>
+					<a href="confirm.html" class="daohang1_cur1_3">周边跟团</a>
+					<a href="confirm.html" class="daohang1_cur1_3">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_4">
+				<a  href="confirm.html" class="daohang2_4 control1">景点门票</a>
+				<div id="daohang1_cur4">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_4 move1">国内门票</a>
+					<a href="confirm.html" class="daohang1_cur1_4">境外门票</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_5">
+				<a  href="confirm.html" class="daohang2_5 control1">度假酒店</a>
+				<div id="daohang1_cur5">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_5 move1">国内酒店</a>
+					<a href="confirm.html" class="daohang1_cur1_5">境外酒店</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_6">
+				<a  href="confirm.html" class="daohang2_6 control1">自驾游</a>
+				<div id="daohang1_cur6">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_6 move1">自驾游首页</a>
+					<a href="confirm.html" class="daohang1_cur1_6">定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_7">
+				<a  href="confirm.html" class="daohang2_7 control1">亲子游</a>
+				<div id="daohang1_cur7">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_7 move1">国内亲子游</a>
+					<a href="confirm.html" class="daohang1_cur1_7">境外亲子游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_8">
+				<a  href="confirm.html" class="daohang2_8 control1">邮轮</a>
+				<div id="daohang1_cur8">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_8 move1">邮轮首页</a>
+					<a href="confirm.html" class="daohang1_cur1_8">日本航线</a>
+					<a href="confirm.html" class="daohang1_cur1_8">海外航线</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_9">
+				<a  href="confirm.html" class="daohang2_9 control1">机票</a>
+				<div id="daohang1_cur9">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_9 move1">国内航线</a>
+					<a href="confirm.html" class="daohang1_cur1_9">港澳台航线</a>
+					<a href="confirm.html" class="daohang1_cur1_9">国外航线</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_10">
+				<a  href="confirm.html" class="daohang2_10 control1">特卖惠</a>
+				<div id="daohang1_cur10">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_10 move1">国内特卖惠</a>
+					<a href="confirm.html" class="daohang1_cur1_10">海外特卖惠</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_11">
+				<a  href="confirm.html" class="daohang2_11 control1">定制游</a>
+				<div id="daohang1_cur11">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_11 move1">个人定制游</a>
+					<a href="confirm.html" class="daohang1_cur1_11">企业定制游</a>
+					</p>
+				</div>
+			</li>
+			<li class="daohang1_12">
+				<a  href="confirm.html" class="daohang2_12 control1">旅游攻略</a>
+				<div id="daohang1_cur12">
+					<p class="daohang1_cur1_1" >
+					<a href="confirm.html" class="daohang1_cur1_12 move1">目的地</a>
+					<a href="confirm.html" class="daohang1_cur1_12">游记</a>
+					<a href="confirm.html" class="daohang1_cur1_12">驴游宝</a>
+					<a href="confirm.html" class="daohang1_cur1_12">问答</a>
+					</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!--导航栏 end-->
+
+<!--主体 begin-->
+<div id="test_main">
+	<div class="test_block"><h1 align="center">测试链接跳转成功！</h1></div>
+	<div class="test_block"><h1 align="center">测试链接跳转成功！</h1></div>
+	<div class="test_block"><h1 align="center">测试链接跳转成功！</h1></div>
+	<div class="test_block"><h1 align="center">测试链接跳转成功！</h1></div>
+	<div class="test_block"><h1 align="center">测试链接跳转成功！</h1></div>
+</div>
+<!--主体 end-->
+
+<!--底部 begin-->
+<div id="footer">
+	<div class="footer1">
+		<p>上海驴妈妈兴旅国际旅行社有限公司。旅行社业务经营许可证编号：L-SH-CJ00056</p>
+		<p>Copyright © 2019 www.lvmama.com. 上海景域文化传播股份有限公司版权所有　营业执照　沪ICP备13011172号-3　增值电信业务经营许可证编号：沪B2-20100030</p>
+		<p>代码托管仓库：https://github.com/q1296962860/q1296962860.github.io </p>
+		<p class="footer1_bg">注：本页面仅用于课题实验</p>
+	</div>
+</div>
+<!--底部 end-->
+
+<!--侧边栏 begin-->
+<div id="beside">
+	<div class="beside1">
+		<a href="confirm.html">
+			<div class="beside1_1"></div>
+			<div class="beside1_2"></div>
+			<div class="beside1_3"><p>APP</p></div>
+		</a>
+		<div id="beside_photo1">
+			<img alt="二维码" src="img/qr.png" width="100px">
+		</div>
+	</div>
+	<div class="beside2">
+		<a href="confirm.html">
+			<div class="beside2_1"></div>
+			<div class="beside2_2"><p>小程序</p></div>
+		</a>
+		<div id="beside_photo2">
+			<img alt="二维码" src="img/qr.png" width="100px">
+		</div>
+	</div>
+	<div class="beside3">
+		<a href="javascript:;">
+			<div class="beside3_1" id="beside_id1">
+				<div class="beside3_1_1"></div>
+				<div class="beside3_1_2"><p>登录</p></div>
+			</div>
+		</a>
+		<a href="javascript:;">
+			<div class="beside3_2">
+				<div class="beside3_2_1"><p>注册</p></div>
+			</div>
+		</a>
+	</div>
+	<div class="beside4">
+		<a href="javascript:;">
+			<div class="beside4_1">
+				<div class="beside4_1_1"></div>
+				<div class="beside4_1_2"><a href="javascript:;">top</a></div>
+			</div>
+		</a>
+	</div>
+</div>
+<div class="back_top"></div>
+<!--侧边栏 end-->
+
+<!--Login begin-->
+<div id="login" class="login_slect">
+	<div class="loginBox">
+		<div class="login_title">
+			<span>登录 / 注册</span>
+			<i class="login_cancel"></i>
+		</div>
+		<div class="login_main">
+			<div class="login_left">
+				<ul class="login_left_main">
+					<input type="text" placeholder="你的手机号/邮箱" class="login_left_input">
+					<div class="login_left_blank"></div>
+					<input type="password" placeholder="密码" class="login_left_input">
+					<div class="login_left_blank"></div>
+					<li>
+						<input type="checkbox">记住我
+						<span>不是自己的电脑上不要勾选此项</span>
+						<a href="javascript:;">忘记密码？</a>
+						<a href="javascript:;" class="login_left_a">无法验证？</a>
+					</li>
+					<div class="login_left_lg">
+						<a class="login_lg">登录</a>
+					</div>
+				</ul>
+			</div>
+			<div class="login_middum"></div>
+			<div class="login_right">
+				<ul class="login_right_main">
+					<input type="text" placeholder="昵称" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="password" placeholder="输入密码" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="password" placeholder="重复密码" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<input type="text" placeholder="手机号/邮箱" class="login_right_input">
+					<div class="login_right_blank"></div>
+					<li>
+						<input type="checkbox">
+						<span> 我已同意<a href="javascript:;">《用户使用协议》</a></span>
+					</li>
+					<div class="login_right_lg">
+						<a class="login_lg">注册</a>
+					</div>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Login end-->
+
+<!--Player begin-->
+<div class="play">
+	<div class="player player_small">
+		<div class="player_min">
+			<div class="backg3"></div>
+			<div class="backg4"></div>
+			<i></i>
+		</div>
+		<div class="player_max">
+			<i></i>
+			<div class="player_head">
+				<h1></h1>
+			</div>
+			<div class="player_body">
+				<div class="player_main">
+					<div class="player_left">
+						<div class="player_left_title">
+							<span>收藏</span>
+							<span>添加到</span>
+							<span>下载</span>
+							<span>删除</span>
+							<span>清空列表</span>
+						</div>
+						<div class="player_left_list">
+							<ul class="player_left_list_ul">
+								<li class="player_list_title">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number"></div>
+									<div class="player_list_name">歌曲</div>
+									<div class="player_list_singer">歌手</div>
+									<div class="player_list_time">时长</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">1</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">2</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">3</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">4</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">5</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">6</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">7</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">8</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">9</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">10</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">11</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">12</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">13</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">14</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">15</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+								<li class="player_list_in">
+									<div class="player_list_check"><input type="checkbox"></div>
+									<div class="player_list_number">16</div>
+									<div class="player_list_name">TEST</div>
+									<div class="player_list_singer">TEST</div>
+									<div class="player_list_time">TEST</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="player_right">
+						<div class="player_right_pic">
+							<div class="song_info_img">
+								<img src="img/album_cover_player.png" alt="">
+								<img src="img/Aqours-LOGO.jpg" alt="">
+							</div>
+							<div class="song_info_name">
+								歌曲名称 TEST
+							</div>
+							<div class="song_info_singer">
+								歌手 TEST
+							</div>
+							<div class="song_info_album">
+								专辑名 TEST
+							</div>
+						</div>
+						<div class="player_right_lrc">
+							<ul class="song_lyric">
+								<li>第一条歌词</li>
+								<li>第二条歌词</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="player_footer">
+				<div class="player_footer_main">
+					<div class="player_footer_up"></div>
+					<div class="player_footer_pause"></div>
+					<div class="player_footer_down"></div>
+					<div class="player_footer_progress">
+						<div class="music_progress_top">
+							<span class="music_progress_name">TEST / TEST</span>
+							<span class="music_progress_time">00:00 / 04:23</span>
+						</div>
+						<div class="music_progress_bar">
+							<div class="music_progress_line">
+								<div class="music_progress_dot"></div>
+							</div>
+						</div>
+					</div>
+					<div class="music_voice_info">
+						<div class="music_voice_icon"></div>
+						<div class="music_voice_bar">
+							<div class="music_voice_line">
+								<div class="music_voice_dot"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="backg1"></div>
+			<div class="backg2"></div>
+		</div>
+	</div>
+</div>
+
+<!--Player end-->
 </body>
 </html>
+
