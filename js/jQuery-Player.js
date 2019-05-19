@@ -24,7 +24,7 @@ $(function(){
 	$(".player_min").hover(function(){
 		$(".player_small").stop().animate({opacity:1},500)
 	},function(){
-		$(".player_small").stop().animate({opacity:0.5},500)
+		$(".player_small").stop().animate({opacity:0.8},500)
 	})
 	//最大化的背景变换
 	var s1 = 1;
@@ -34,7 +34,8 @@ $(function(){
 			if(s1 == 7){s1 = 1};
 //			console.log(s1);
 			$(".backg1").animate({opacity:0.7},1000,function(){
-				$(".backg1").attr({style:"background: url( 'img/banner"+s1+".jpg') no-repeat"});
+				$(".backg1").attr({style:"background: url( 'img/banner"+s1+".jpg') no-repeat"}).animate({opacity:0.7},1);
+				$(".backg1").animate({opacity:1},1000);
 			});
 		},5000)
 	}
@@ -45,7 +46,8 @@ $(function(){
 			s1++;
 			if(s1 == 7){s1 = 1};
 			$(".backg3").animate({opacity:0.7},1000,function(){
-				$(".backg3").attr({style:"background: url( 'img/banner"+s1+".jpg') no-repeat"});
+				$(".backg3").attr({style:"background: url( 'img/banner"+s1+".jpg') no-repeat"}).animate({opacity:0.7},1);
+				$(".backg3").animate({opacity:1},1000);
 			});
 		},5000)
 	}
@@ -103,7 +105,7 @@ $(function(){
 		$(".music_voice_dot").stop().animate({left:nowX1-7},500);
 
 	})
-		//拖动事件1375-1512
+		//拖动事件
 	$(".music_voice_bar").mousedown(function(){
 		$(document).mousemove(function(e){
 			var nowX1 = e.pageX - 1375;

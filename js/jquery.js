@@ -155,6 +155,8 @@ $(function(){
 	//折叠菜单
 
 	$(".main3_tab_nav>li").mouseenter(function(){
+			$(this).find("a").css({color:"#f08333"});
+			$(this).siblings().find("a").css({color:"#fff"});
 			$(this).addClass("main3_tab_current");
 			$(this).siblings().removeClass("main3_tab_current");
 			var index = $(this).index();
@@ -298,6 +300,7 @@ $(function(){
 				$(".leftFloat ul li").eq(5).siblings().removeClass(leftChange1).removeClass(leftChange2);
 			}
 		})
-		//leftFloat
+	//leftFloat
+	
 
 })
