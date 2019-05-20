@@ -1,5 +1,36 @@
 // JavaScript Document
 //player区域
+
+$.fn.extend({SliderQbject:function(objMove){
+				var dpX, dpY, ipX, ipY, tempX, tempY;
+				var obj = $(objMove) == undefined ? $(this) : $(objMove);
+				$(this).mousedown (function(e){
+					dpX = e.pageX;               
+					dpY = e.pageY;
+					ipX = obj.css("left").replace("px", "");
+					ipY = obj.css("top").replace("px", "");
+					$(document).mousemove(function(e){
+						tempX = parseInt(e.pageX) - parseInt(dpX) + parseInt(ipX);
+						tempY = parseInt(e.pageY) - parseInt(dpY) + parseInt(ipY);
+						obj.css({left:tempX + "px", top: tempY + "px"});
+					}).mouseup(function(){
+						var screenX = screen.availWidth;
+						var screenY = screen.availHeight;
+						tempX<0 ? tempX=0 : tempX;
+						tempX>screenX-400 ? tempX=screenX-400 : tempX;
+						tempY<0 ? tempY=0 : tempY;
+						tempY>screenY-200 ? tempY=screenY-200 : tempY;
+						// console.log(tempX, tempY);
+						obj.css({left:tempX + "px", top: tempY + "px"});
+						$(document).off("mousemove");
+					}).mouseleave(function(){
+						$(document).off("mousemove");
+					});
+				});
+			}});
+			
+			
+			
 $(function(){
 	//初始化
 	$(".player").find(".player_max").hide(0);
@@ -123,4 +154,5 @@ $(function(){
 	$(document).mouseup(function(){
 		$(document).off("mousemove");
 	});
+	$(".backg3").SliderQbject($(".player_min"));
 })
