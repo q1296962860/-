@@ -94,10 +94,14 @@ $(function(){
 			clickNum = 1;
 		}
 	})
+	
 	//控制主进度条
+	var truthX = (screen.availWidth - 1200) / 2 + 279;
 		//点击事件
 	$(".music_progress_bar").click(function(e){
-		var nowX = e.pageX - 608;
+		
+//		console.log(truthX);
+		var nowX = e.pageX - truthX;
 		if(nowX<6){
 			nowX = 6
 		}
@@ -109,7 +113,7 @@ $(function(){
 		//拖动事件
 	$(".music_progress_bar").mousedown(function(){
 		$(document).mousemove(function(e){
-			var nowX = e.pageX - 608;
+			var nowX = e.pageX - truthX;
 			if(nowX<6){
 				nowX = 6
 			}
@@ -127,7 +131,8 @@ $(function(){
 	//控制次进度条
 		//点击事件
 	$(".music_voice_bar").click(function(e){
-		var nowX1 = e.pageX - 1375;
+		var nowX1 = e.pageX - (truthX + 767);
+//		console.log(nowX1);
 		if(nowX1<6){
 			nowX1 = 6
 		}
@@ -139,7 +144,7 @@ $(function(){
 		//拖动事件
 	$(".music_voice_bar").mousedown(function(){
 		$(document).mousemove(function(e){
-			var nowX1 = e.pageX - 1375;
+			var nowX1 = e.pageX - (truthX + 767);
 			if(nowX1<6){
 				nowX1 = 6
 			}
